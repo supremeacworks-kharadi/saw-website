@@ -26,12 +26,12 @@ export default function SiteFooter() {
 		<footer className="saw-footer">
 			<div className="saw-container saw-footer__grid">
 				<div className="saw-footer__brand">
-					<Link to="/" className="saw-logo saw-logo--footer">
-						<span className="saw-logo__mark">SA</span>
-						<span className="saw-logo__text">
-							<strong>SUPREME AC WORKS</strong>
-							<small>AC Spare Parts, Refrigerants &amp; HVAC Materials</small>
-						</span>
+					<Link to="/" className="saw-logo saw-logo--footer" aria-label="Supreme AC Works — home">
+						<img
+							src="/branding/logo-full.png"
+							alt="Supreme AC Works"
+							className="saw-logo__image saw-logo__image--footer"
+						/>
 					</Link>
 					<p>
 						Everything you need for AC installation, service and maintenance — for

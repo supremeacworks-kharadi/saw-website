@@ -191,6 +191,21 @@ h1, h2, h3, .saw-logo__text strong {
 	flex-shrink: 0;
 }
 
+.saw-logo__image {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+.saw-logo__image--header {
+	height: 56px;
+}
+
+.saw-logo__image--mobile {
+	height: 42px;
+}
+
 .saw-logo__mark {
 	display: inline-flex;
 	align-items: center;
@@ -1217,6 +1232,10 @@ h1, h2, h3, .saw-logo__text strong {
 
 .saw-logo--footer .saw-logo__text strong { color: #ffffff; }
 .saw-logo--footer .saw-logo__text small { color: #94a3b8; }
+
+.saw-logo__image--footer {
+	height: 64px;
+}
 
 .saw-footer__social { display: flex; gap: 10px; }
 

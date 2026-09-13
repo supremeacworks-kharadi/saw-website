@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, ShoppingCart, MessageCircle, Phone } from 'lucide-react';
+import { Menu, X, Search, ShoppingCart, MessageCircle } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
 
@@ -48,11 +48,11 @@ export default function SiteHeader() {
 
 			<div className="saw-container saw-header__inner">
 				<Link to="/" className="saw-logo" aria-label="Supreme AC Works — home">
-					<span className="saw-logo__mark">SA</span>
-					<span className="saw-logo__text">
-						<strong>SUPREME AC WORKS</strong>
-						<small>AC Spare Parts • Refrigerants • HVAC Materials</small>
-					</span>
+					<img
+						src="/branding/logo-full.png"
+						alt="Supreme AC Works"
+						className="saw-logo__image saw-logo__image--header"
+					/>
 				</Link>
 
 				<nav className="saw-nav" aria-label="Main navigation">
@@ -126,7 +126,11 @@ export default function SiteHeader() {
 			{isMenuOpen ? (
 				<div className="saw-mobile-menu" role="dialog" aria-label="Menu">
 					<div className="saw-mobile-menu__head">
-						<span className="saw-logo__mark">SA</span>
+						<img
+							src="/branding/logo-icon.png"
+							alt="Supreme AC Works"
+							className="saw-logo__image saw-logo__image--mobile"
+						/>
 						<button type="button" className="saw-icon-btn" aria-label="Close menu" onClick={() => setIsMenuOpen(false)}>
 							<X size={22} strokeWidth={2.2} />
 						</button>
