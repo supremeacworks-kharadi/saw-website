@@ -1,0 +1,32 @@
+[
+	{
+		"path": "/",
+		"componentName": "HomePage_system_home",
+		"importPath": "@/pages/builder/home/HomePage",
+		"exportName": "HomePage",
+		"locale": "system",
+		"pageId": "home",
+		"isHome": true,
+		"pageType": "default"
+	},
+	{
+		"path": "/products",
+		"componentName": "ProductsPage_system_zZw8_c",
+		"importPath": "@/pages/builder/products/ProductsPage",
+		"exportName": "ProductsPage",
+		"locale": "system",
+		"pageId": "zZw8-c",
+		"isHome": false,
+		"pageType": "default"
+	},
+	{
+		"path": "/:slug",
+		"componentName": "DynamicProductPage_system",
+		"importPath": "@/pages/builder/dynamic-product/DynamicProductPage",
+		"exportName": "DynamicProductPage",
+		"locale": "system",
+		"pageId": "z6u-jN",
+		"isHome": false,
+		"pageType": "ecommerce-dynamic-product"
+	}
+]
