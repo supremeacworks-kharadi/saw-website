@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { CATEGORIES } from '@/data/catalogue';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
-import { businessPhone, businessEmail, businessAddress, businessMapLink, whatsAppDisplay } from '@/data/siteMeta';
+import { businessLocations, businessPhoneNumbers, businessEmail, businessAddress, businessMapLink, whatsAppDisplay } from '@/data/siteMeta';
 
 const QUICK_LINKS = [
 	{ to: '/', label: 'Home' },
@@ -20,6 +20,8 @@ const POLICY_LINKS = [
 	{ to: '/shipping-policy', label: 'Shipping Policy' },
 	{ to: '/return-refund-policy', label: 'Return / Refund Policy' },
 ];
+
+const additionalLocationsCount = Math.max(businessLocations.length - 1, 0);
 
 export default function SiteFooter() {
 	return (
@@ -77,10 +79,30 @@ export default function SiteFooter() {
 				<div>
 					<h4>Contact</h4>
 					<ul className="saw-footer__contact">
-						<li><Phone size={15} strokeWidth={2.2} /> {businessPhone || '[I WILL ADD]'}</li>
+						<li>
+							<Phone size={15} strokeWidth={2.2} />
+							{businessPhoneNumbers?.length ? (
+								<span className="saw-footer__phone-links">
+									{businessPhoneNumbers.map((phone) => (
+										<a key={phone.value} href={`tel:${phone.value}`}>{phone.display}</a>
+									))}
+								</span>
+							) : 'Not available'}
+						</li>
 						<li><MessageCircle size={15} strokeWidth={2.2} /> WhatsApp: {whatsAppDisplay}</li>
-						<li><Mail size={15} strokeWidth={2.2} /> {businessEmail || '[I WILL ADD]'}</li>
-						<li><MapPin size={15} strokeWidth={2.2} /> <a href={businessMapLink} target="_blank" rel="noopener noreferrer">{businessAddress || '[I WILL ADD]'}</a></li>
+						<li><Mail size={15} strokeWidth={2.2} /> {businessEmail || 'Not available'}</li>
+						<li>
+							<MapPin size={15} strokeWidth={2.2} />
+							{businessAddress && businessMapLink && businessMapLink !== '#' ? (
+								<a href={businessMapLink} target="_blank" rel="noopener noreferrer">{businessAddress}</a>
+							) : businessAddress || 'Not available'}
+						</li>
+						{additionalLocationsCount > 0 ? (
+							<li>
+								<MapPin size={15} strokeWidth={2.2} />
+								<Link to="/contact">{additionalLocationsCount} more shop location{additionalLocationsCount > 1 ? 's' : ''}</Link>
+							</li>
+						) : null}
 					</ul>
 					<h4 className="saw-footer__policies-title">Policies</h4>
 					<ul>

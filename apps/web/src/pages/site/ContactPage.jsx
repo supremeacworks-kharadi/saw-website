@@ -1,19 +1,30 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin, Clock, User } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import EnquiryForm from '@/components/site/EnquiryForm';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
-import { businessPhone, businessEmail, businessAddress, businessMapLink, businessHours, whatsAppDisplay } from '@/data/siteMeta';
+import {
+	businessLocations,
+	businessPhone,
+	businessPhoneNumbers,
+	businessEmail,
+	businessAddress,
+	businessMapLink,
+	businessHours,
+	whatsAppDisplay,
+} from '@/data/siteMeta';
 
 const CONTACT_ROWS = [
-	{ icon: Phone, label: 'Phone', value: businessPhone || '[I WILL ADD]' },
+	{ icon: Phone, label: 'Phone', phoneNumbers: businessPhoneNumbers },
 	{ icon: MessageCircle, label: 'WhatsApp', value: whatsAppDisplay },
-	{ icon: Mail, label: 'Email', value: businessEmail || '[I WILL ADD]' },
-	{ icon: MapPin, label: 'Address', value: businessAddress || '[I WILL ADD]', href: businessMapLink },
-	{ icon: Clock, label: 'Business hours', value: businessHours || '[I WILL ADD]' },
+	{ icon: Mail, label: 'Email', value: businessEmail || 'Not available' },
+	{ icon: MapPin, label: 'Address', value: businessAddress || 'Not available', href: businessMapLink },
+	{ icon: Clock, label: 'Business hours', value: businessHours || 'Not available' },
 ];
+
+const hasMultipleLocations = businessLocations.length > 1;
 
 export default function ContactPage() {
 	return (
@@ -43,7 +54,17 @@ export default function ContactPage() {
 										<span className="saw-contact-card__icon"><Icon size={19} strokeWidth={2.2} /></span>
 										<div>
 											<strong>{row.label}</strong>
-											<p>{row.href ? <a href={row.href} target="_blank" rel="noopener noreferrer">{row.value}</a> : row.value}</p>
+											<p>
+												{row.phoneNumbers?.length ? (
+													<span className="saw-contact-phone-links">
+														{row.phoneNumbers.map((phone) => (
+															<a key={phone.value} href={`tel:${phone.value}`}>{phone.display}</a>
+														))}
+													</span>
+												) : row.href && row.value !== 'Not available' ? (
+													<a href={row.href} target="_blank" rel="noopener noreferrer">{row.value}</a>
+												) : row.value}
+											</p>
 										</div>
 									</div>
 								);
@@ -64,6 +85,45 @@ export default function ContactPage() {
 							<MapPin size={22} strokeWidth={2} />
 							<p>View this address on Google Maps</p>
 						</a>
+
+						{hasMultipleLocations ? (
+							<div className="saw-locations-list">
+								<h2>All shop locations</h2>
+								<div className="saw-locations-list__grid">
+									{businessLocations.map((location) => (
+										<div key={location.id || location.name} className="saw-location-card">
+											<div className="saw-location-card__head">
+												<strong>{location.name || 'Shop'}</strong>
+												{location.isPrimary ? <span>Primary</span> : null}
+											</div>
+											<ul>
+												{location.contactPerson ? (
+													<li><User size={15} strokeWidth={2.2} /> {location.contactPerson}</li>
+												) : null}
+												<li>
+													<Phone size={15} strokeWidth={2.2} />
+													{location.phoneNumbers?.length ? (
+														<span className="saw-contact-phone-links">
+															{location.phoneNumbers.map((phone) => (
+																<a key={phone.value} href={`tel:${phone.value}`}>{phone.display}</a>
+															))}
+														</span>
+													) : 'Not available'}
+												</li>
+												<li><Mail size={15} strokeWidth={2.2} /> {location.email || 'Not available'}</li>
+												<li>
+													<MapPin size={15} strokeWidth={2.2} />
+													{location.address && location.mapLink ? (
+														<a href={location.mapLink} target="_blank" rel="noopener noreferrer">{location.address}</a>
+													) : location.address || 'Not available'}
+												</li>
+												<li><Clock size={15} strokeWidth={2.2} /> {location.hours || 'Not available'}</li>
+											</ul>
+										</div>
+									))}
+								</div>
+							</div>
+						) : null}
 					</div>
 
 					<div className="saw-panel">
