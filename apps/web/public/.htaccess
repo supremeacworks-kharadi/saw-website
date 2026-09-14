@@ -1,0 +1,27 @@
+# SPA deep-link routing for Apache / LiteSpeed (Hostinger)
+# Serves index.html for client-side routes like /contact, /about, /shop, etc.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If the request maps to an existing file or directory, serve it as-is
+  # (covers /assets/*, images, .css, .js, favicon, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise, hand the route to the SPA entry point
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Sensible caching: long-lived hashed assets, short-lived HTML
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:js|css|png|jpg|jpeg|gif|svg|webp|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(?:html)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
