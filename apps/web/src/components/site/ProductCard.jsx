@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, MessageCircle } from 'lucide-react';
+import { ClipboardList, MessageCircle } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import {
 	getProductImage,
@@ -42,6 +42,7 @@ export default function ProductCard({ product }) {
 			variant_id: variant?.id || product.id,
 			variant_title: variant?.title || '',
 			title: product.title,
+			sku,
 			image: getProductImage(product),
 			price_amount: getVariantPriceAmount(variant),
 			currency: getVariantCurrency(variant),
@@ -77,7 +78,7 @@ export default function ProductCard({ product }) {
 				<div className="saw-product-card__actions">
 					{isPurchasable ? (
 						<button type="button" className="saw-btn saw-btn--red saw-btn--sm" onClick={handleAdd}>
-							<ShoppingCart size={15} strokeWidth={2.4} /> Add to Cart
+							<ClipboardList size={15} strokeWidth={2.4} /> Add to Enquiry
 						</button>
 					) : null}
 					<a

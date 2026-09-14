@@ -7,33 +7,11 @@ import React, {
 } from 'react';
 import QuantityPicker from './QuantityPicker.jsx';
 import { productPlaceholderImage } from '@/data/ecommerce';
+import { buildWhatsAppLink, enquiryListMessage } from '@/lib/whatsapp';
 
 const EcommerceCartContext = createContext(null);
-const STORAGE_KEY = 'shopping-cart-items';
+const STORAGE_KEY = 'enquiry-list-items';
 const STORAGE_TTL_MS = 24 * 60 * 60 * 1000;
-
-export function getCheckoutSuccessUrl(items) {
-	const types = (items || []).map((item) => item?.type).filter(Boolean);
-	const params = new URLSearchParams({ 'open-modal': 'EcommerceCheckoutSuccess' });
-
-	if (types.length && types.every((type) => type === 'donation')) {
-		params.set('product', 'donation');
-	} else if (types.includes('booking')) {
-		params.set('product', 'booking');
-	} else if (types.includes('digital')) {
-		params.set('product', 'digital');
-	}
-
-	const origin = typeof window !== 'undefined' ? window.location.origin : '';
-	return `${origin}/?${params.toString()}`;
-}
-
-export function getCheckoutCancelUrl() {
-	if (typeof window === 'undefined') {
-		return '';
-	}
-	return `${window.location.origin}${window.location.pathname}`;
-}
 
 function readStoredItems() {
 	if (typeof window === 'undefined') {
@@ -74,7 +52,6 @@ function persistItems(items) {
 export function EcommerceCartProvider({ children }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [items, setItems] = useState(() => readStoredItems());
-	const [checkoutStatus, setCheckoutStatus] = useState('idle');
 
 	useEffect(() => {
 		persistItems(items);
@@ -87,7 +64,6 @@ export function EcommerceCartProvider({ children }) {
 			isOpen,
 			items,
 			itemCount,
-			checkoutStatus,
 			openCart: () => setIsOpen(true),
 			closeCart: () => setIsOpen(false),
 			toggleCart: () => setIsOpen((current) => !current),
@@ -127,42 +103,15 @@ export function EcommerceCartProvider({ children }) {
 					: current.filter((entry) => (entry.variant_id || entry.id) !== itemId)));
 			},
 			clearCart: () => setItems([]),
-			checkout: async () => {
-				if (!items.length) {
+			sendEnquiry: (customer = {}) => {
+				if (!items.length || typeof window === 'undefined') {
 					return;
 				}
-
-				setCheckoutStatus('loading');
-				try {
-					const ecommerceApi = await import('@/api/EcommerceApi.js');
-					if (!ecommerceApi.initializeCheckout) {
-						throw new Error('initializeCheckout unavailable');
-					}
-
-					const result = await ecommerceApi.initializeCheckout({
-						items: items.map((item) => ({
-							variant_id: item.variant_id || item.id,
-							quantity: item.quantity || 1,
-							...(item.custom_fields?.length ? { customFieldValues: item.custom_fields } : {}),
-						})),
-						successUrl: getCheckoutSuccessUrl(items),
-						cancelUrl: getCheckoutCancelUrl(),
-					});
-
-					const checkoutUrl = result?.checkout_url || result?.url || result?.redirect_url;
-					if (checkoutUrl && typeof window !== 'undefined') {
-						window.location.assign(checkoutUrl);
-						return;
-					}
-
-					setCheckoutStatus('success');
-				} catch (error) {
-					console.warn('[EcommerceCart] checkout failed', error);
-					setCheckoutStatus('error');
-				}
+				const link = buildWhatsAppLink(enquiryListMessage(items, customer));
+				window.open(link, '_blank', 'noopener,noreferrer');
 			},
 		};
-	}, [isOpen, items, checkoutStatus]);
+	}, [isOpen, items]);
 
 	return (
 		<EcommerceCartContext.Provider value={api}>
@@ -170,11 +119,10 @@ export function EcommerceCartProvider({ children }) {
 			<EcommerceCart
 				isOpen={api.isOpen}
 				items={api.items}
-				checkoutStatus={api.checkoutStatus}
 				onClose={api.closeCart}
 				onRemove={api.removeItem}
 				onQuantityChange={api.setItemQuantity}
-				onCheckout={api.checkout}
+				onSendEnquiry={api.sendEnquiry}
 			/>
 		</EcommerceCartContext.Provider>
 	);
@@ -187,7 +135,6 @@ export function useEcommerceCart() {
 			isOpen: false,
 			items: [],
 			itemCount: 0,
-			checkoutStatus: 'idle',
 			openCart: () => {},
 			closeCart: () => {},
 			toggleCart: () => {},
@@ -196,71 +143,56 @@ export function useEcommerceCart() {
 			removeItem: () => {},
 			setItemQuantity: () => {},
 			clearCart: () => {},
-			checkout: async () => {},
+			sendEnquiry: () => {},
 		};
 	}
 	return context;
 }
 
 /** Prices travel as minor units, the same as the store API reports them. */
-function getFormattedSubtotal(items) {
-	const priced = items.filter((item) => typeof item.price_amount === 'number');
-
-	if (!priced.length) {
-		return '';
-	}
-
-	const total = priced.reduce((sum, item) => sum + item.price_amount * (item.quantity || 1), 0);
-	const currencyInfo = priced.find((item) => item.currency_info)?.currency_info;
-
-	if (currencyInfo) {
-		const digits = Number.isInteger(currencyInfo.decimal_digits) ? currencyInfo.decimal_digits : 2;
-		const amount = (total / (10 ** digits)).toFixed(digits);
-
-		return currencyInfo.template
-			? currencyInfo.template.replace('$1', amount)
-			: `${currencyInfo.symbol || currencyInfo.code || ''}${amount}`;
-	}
-
-	const currency = priced.find((item) => item.currency)?.currency;
-
-	if (!currency) {
-		return String(total / 100);
-	}
-
-	try {
-		return new Intl.NumberFormat(undefined, {
-			style: 'currency',
-			currency: currency.toUpperCase(),
-		}).format(total / 100);
-	} catch (error) {
-		return `${(total / 100).toFixed(2)} ${currency.toUpperCase()}`;
-	}
-}
-
 export default function EcommerceCart({
 	isOpen = false,
 	items = [],
-	checkoutStatus = 'idle',
 	onClose,
 	onRemove,
 	onQuantityChange,
-	onCheckout,
+	onSendEnquiry,
 }) {
+	const [showForm, setShowForm] = useState(false);
+	const [customerName, setCustomerName] = useState('');
+	const [customerMobile, setCustomerMobile] = useState('');
+	const [formError, setFormError] = useState('');
+
+	const handleSubmitEnquiry = (event) => {
+		event.preventDefault();
+		const name = customerName.trim();
+		const mobile = customerMobile.trim();
+		if (!name) {
+			setFormError('Please enter your name.');
+			return;
+		}
+		if (mobile.replace(/\D/g, '').length < 10) {
+			setFormError('Please enter a valid 10-digit contact number.');
+			return;
+		}
+		setFormError('');
+		if (onSendEnquiry) {
+			onSendEnquiry({ name, mobile });
+		}
+	};
+
 	if (!isOpen) {
 		return null;
 	}
-
-	const subtotal = getFormattedSubtotal(items);
 
 	return (
 		<aside
 			className="ecommerce-cart cart-drawer"
 			role="dialog"
-			aria-label="Shopping cart"
+			aria-label="Enquiry list"
 		>
 			<header className="ecommerce-cart__header">
-				<strong>Cart</strong>
+				<strong>Enquiry List</strong>
 				{onClose ? (
 					<button type="button" className="ecommerce-cart__close" onClick={onClose}>
 						Close
@@ -284,14 +216,19 @@ export default function EcommerceCart({
 										{item.variant_title ? (
 											<div className="ecommerce-cart__variant">{item.variant_title}</div>
 										) : null}
+										{item.sku ? (
+											<div className="ecommerce-cart__variant">SKU: {item.sku}</div>
+										) : null}
 										{(item.custom_fields || []).map((field) => (
 											<div key={field.title} className="ecommerce-cart__custom-field">
 												{`${field.title}: ${field.value}`}
 											</div>
 										))}
-										<div className="ecommerce-cart__meta">
-											{price}
-										</div>
+										{price ? (
+											<div className="ecommerce-cart__meta">
+												{price}
+											</div>
+										) : null}
 										{onQuantityChange ? (
 											<QuantityPicker
 												quantity={item.quantity || 1}
@@ -316,26 +253,72 @@ export default function EcommerceCart({
 					})}
 				</ul>
 			) : (
-				<p className="ecommerce-cart__empty">Your cart is empty</p>
+				<p className="ecommerce-cart__empty">Your enquiry list is empty</p>
 			)}
 			<div className="ecommerce-cart__footer">
-				{subtotal ? (
-					<p className="ecommerce-cart__subtotal">
-						<span>Subtotal:</span>
-						<strong>{subtotal}</strong>
-					</p>
-				) : null}
-				{checkoutStatus === 'error' ? (
-					<p className="ecommerce-cart__error">Checkout failed. Try again.</p>
-				) : null}
-				<button
-					type="button"
-					className="ecommerce-cart__checkout"
-					disabled={!items.length || checkoutStatus === 'loading'}
-					onClick={onCheckout}
-				>
-					{checkoutStatus === 'loading' ? 'Starting checkout…' : 'Checkout'}
-				</button>
+				{showForm ? (
+					<form className="ecommerce-cart__form" onSubmit={handleSubmitEnquiry} noValidate>
+						<p className="ecommerce-cart__enquiry-note">
+							Enter your details — we will send your product list to Supreme AC Works on WhatsApp.
+						</p>
+						<label className="ecommerce-cart__field">
+							<span>Name *</span>
+							<input
+								className="saw-input"
+								value={customerName}
+								onChange={(event) => setCustomerName(event.target.value)}
+								placeholder="Your full name"
+							/>
+						</label>
+						<label className="ecommerce-cart__field">
+							<span>Contact number *</span>
+							<input
+								className="saw-input"
+								type="tel"
+								value={customerMobile}
+								onChange={(event) => setCustomerMobile(event.target.value)}
+								placeholder="10-digit mobile number"
+							/>
+						</label>
+						{formError ? (
+							<p className="ecommerce-cart__form-error">{formError}</p>
+						) : null}
+						<button
+							type="submit"
+							className="ecommerce-cart__checkout"
+							disabled={!items.length}
+						>
+							Send Enquiry on WhatsApp
+						</button>
+						<button
+							type="button"
+							className="ecommerce-cart__form-back"
+							onClick={() => {
+								setShowForm(false);
+								setFormError('');
+							}}
+						>
+							Back to list
+						</button>
+					</form>
+				) : (
+					<>
+						<p className="ecommerce-cart__enquiry-note">
+							Send your selected products to us on WhatsApp for price and availability.
+						</p>
+						<button
+							type="button"
+							className="ecommerce-cart__checkout"
+							disabled={!items.length}
+							onClick={() => {
+								setFormError('');
+								setShowForm(true);
+							}}
+						>
+							Send Enquiry on WhatsApp
+						</button>
+					</>
+				)}
 			</div>
 		</aside>
 	);

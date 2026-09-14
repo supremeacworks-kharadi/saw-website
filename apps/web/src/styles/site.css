@@ -1466,13 +1466,30 @@ h1, h2, h3, .saw-logo__text strong {
 .ecommerce-cart__footer { border-top: 1px solid var(--saw-line); padding-top: 14px; }
 .ecommerce-cart__subtotal { display: flex; justify-content: space-between; font-size: 15px; margin: 0 0 12px; }
 .ecommerce-cart__error { color: var(--saw-red-dark); font-size: 13px; }
+.ecommerce-cart__enquiry-note { font-size: 12.5px; color: var(--saw-muted); margin: 0 0 12px; line-height: 1.5; }
+
+.ecommerce-cart__form { display: flex; flex-direction: column; gap: 10px; }
+.ecommerce-cart__field { display: flex; flex-direction: column; gap: 5px; }
+.ecommerce-cart__field span { font-size: 12.5px; font-weight: 600; color: var(--saw-ink); }
+.ecommerce-cart__form-error { color: var(--saw-red-dark); font-size: 12.5px; margin: 0; }
+.ecommerce-cart__form-back {
+	border: none;
+	background: none;
+	color: var(--saw-muted);
+	font-size: 12.5px;
+	font-weight: 600;
+	cursor: pointer;
+	padding: 2px;
+	align-self: center;
+}
+.ecommerce-cart__form-back:hover { color: var(--saw-red); }
 
 .ecommerce-cart__checkout {
 	width: 100%;
 	min-height: 50px;
 	border: none;
 	border-radius: 8px;
-	background: var(--saw-red);
+	background: var(--saw-whatsapp);
 	color: #ffffff;
 	font-family: var(--saw-font-body);
 	font-size: 14px;
@@ -1481,7 +1498,7 @@ h1, h2, h3, .saw-logo__text strong {
 	text-transform: uppercase;
 	cursor: pointer;
 }
-.ecommerce-cart__checkout:hover { background: var(--saw-red-dark); }
+.ecommerce-cart__checkout:hover { filter: brightness(0.95); }
 .ecommerce-cart__checkout:disabled { opacity: 0.5; cursor: default; }
 
 /* ── Reduced motion ── */

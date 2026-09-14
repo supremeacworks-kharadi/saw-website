@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, Tag, Minus, Plus, Check, ChevronRight } from 'lucide-react';
+import { ClipboardList, MessageCircle, Tag, Minus, Plus, Check, ChevronRight } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard, { getProductHref } from '@/components/site/ProductCard';
@@ -81,6 +81,7 @@ export default function ProductPage() {
 			variant_id: variant?.id || product.id,
 			variant_title: variant?.title || '',
 			title: product.title,
+			sku,
 			image: getProductImage(product),
 			price_amount: getVariantPriceAmount(variant),
 			currency: getVariantCurrency(variant),
@@ -185,7 +186,7 @@ export default function ProductPage() {
 
 									<div className="saw-product__actions">
 										<button type="button" className="saw-btn saw-btn--red saw-btn--lg" onClick={handleAdd}>
-											<ShoppingCart size={17} strokeWidth={2.2} /> Add to Cart
+											<ClipboardList size={17} strokeWidth={2.2} /> Add to Enquiry
 										</button>
 										<a
 											className="saw-btn saw-btn--whatsapp saw-btn--lg"
