@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supremeacworks.com/sitemap.xml
+
