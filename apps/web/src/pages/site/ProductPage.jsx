@@ -5,6 +5,7 @@ import { ClipboardList, MessageCircle, Tag, Minus, Plus, Check, ChevronRight } f
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard, { getProductHref } from '@/components/site/ProductCard';
+import Seo from '@/components/Seo';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import {
 	getProductImage,
@@ -16,6 +17,7 @@ import {
 import { productPlaceholderImage } from '@/data/ecommerce';
 import { matchCategory } from '@/data/catalogue';
 import { buildWhatsAppLink, productEnquiryMessage, bestPriceMessage } from '@/lib/whatsapp';
+import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
 export default function ProductPage() {
 	const { slug } = useParams();
@@ -74,6 +76,51 @@ export default function ProductPage() {
 			.slice(0, 4);
 	}, [allProducts, product, category]);
 
+	const productDescription = product?.seo_settings?.description
+		|| product?.subtitle
+		|| `${product?.title || 'AC spare parts and HVAC materials'} at Supreme AC Works. Enquire on WhatsApp for best price and availability.`;
+	const canonicalUrl = product ? `${siteUrl}/product/${product.slug || product.id}` : `${siteUrl}/shop`;
+	const ogImage = images[0] || defaultOgImage;
+
+	const productJsonLd = useMemo(() => {
+		if (!product) return null;
+		const priceMinor = getVariantPriceAmount(variant);
+		const currency = (getVariantCurrency(variant) || 'INR').toUpperCase();
+		const data = {
+			'@context': 'https://schema.org',
+			'@type': 'Product',
+			name: product.title,
+			description: productDescription,
+			image: images.filter(Boolean),
+			...(sku ? { sku } : {}),
+			...(category ? { category: category.name } : {}),
+		};
+		if (typeof priceMinor === 'number') {
+			data.offers = {
+				'@type': 'Offer',
+				price: (priceMinor / 100).toFixed(2),
+				priceCurrency: currency,
+				availability: 'https://schema.org/InStock',
+				url: canonicalUrl,
+				seller: { '@type': 'Organization', name: 'Supreme AC Works' },
+			};
+		}
+		return data;
+	}, [product, variant, images, sku, category, productDescription, canonicalUrl]);
+
+	const breadcrumbJsonLd = useMemo(() => {
+		if (!product) return null;
+		const items = [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+			{ '@type': 'ListItem', position: 2, name: 'Shop', item: `${siteUrl}/shop` },
+		];
+		if (category) {
+			items.push({ '@type': 'ListItem', position: 3, name: category.name, item: `${siteUrl}/category/${category.slug}` });
+		}
+		items.push({ '@type': 'ListItem', position: items.length + 1, name: product.title, item: canonicalUrl });
+		return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items };
+	}, [product, category, canonicalUrl]);
+
 	const handleAdd = () => {
 		if (!product) return;
 		addItem({
@@ -97,7 +144,23 @@ export default function ProductPage() {
 			<Helmet>
 				<title>{product ? `${product.title} — Supreme AC Works` : 'Product — Supreme AC Works'}</title>
 				<meta name="description" content={product?.seo_settings?.description || `${product?.title || 'AC spare parts and HVAC materials'} at Supreme AC Works. Enquire on WhatsApp for best price and availability.`} />
+				{productJsonLd ? (
+					<script type="application/ld+json">{JSON.stringify(productJsonLd)}</script>
+				) : null}
+				{breadcrumbJsonLd ? (
+					<script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+				) : null}
 			</Helmet>
+			{product ? (
+				<Seo
+					title={`${product.title} — Supreme AC Works`}
+					description={productDescription}
+					siteName={siteName}
+					image={ogImage}
+					url={canonicalUrl}
+					type="product"
+				/>
+			) : null}
 			<SiteHeader />
 
 			{status === 'loading' ? (

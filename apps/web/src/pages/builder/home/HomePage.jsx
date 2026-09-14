@@ -12,6 +12,8 @@ import ProductCard from '@/components/site/ProductCard';
 import Reveal from '@/components/Reveal';
 import { IMAGES, COPPER_SIZES, REFRIGERANT_TYPES, WHY_POINTS, INSTALLATION_KIT_ITEMS } from '@/data/catalogue';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE, BULK_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
+import Seo from '@/components/Seo';
+import { siteName, defaultOgImage } from '@/data/siteMeta';
 
 const WHY_ICONS = [Layers, IndianRupee, Headset, Package, MessageCircle, Zap];
 
@@ -80,6 +82,12 @@ export default function HomePage() {
 				<title>Supreme AC Works — AC Spare Parts, Refrigerant Gas, Copper Pipe & HVAC Materials Supplier in India</title>
 				<meta name="description" content="Supreme AC Works supplies AC spare parts, R32 / R410A / R134a refrigerant gases, AC copper pipes, compressors, motors, insulation, electrical material, AC stands and HVAC tools to technicians, contractors and dealers across India. Enquire on WhatsApp for best prices." />
 			</Helmet>
+			<Seo
+				title="Supreme AC Works — AC Spare Parts, Refrigerant Gas, Copper Pipe & HVAC Materials Supplier in India"
+				description="Supreme AC Works supplies AC spare parts, refrigerant gases, copper pipes, compressors, motors, insulation, electrical material, AC stands and HVAC tools to technicians, contractors and dealers across India."
+				siteName={siteName}
+				image={defaultOgImage}
+			/>
 			<SiteHeader />
 
 			{/* ── HERO ─────────────────────────────────────────────── */}

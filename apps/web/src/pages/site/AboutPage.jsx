@@ -5,8 +5,10 @@ import { MessageCircle, Package, IndianRupee, Headset, Truck, Zap, Layers } from
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import Reveal from '@/components/Reveal';
+import Seo from '@/components/Seo';
 import { IMAGES } from '@/data/catalogue';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
+import { siteName, defaultOgImage } from '@/data/siteMeta';
 
 const FOCUS_POINTS = [
 	{ icon: Package, title: 'Product Availability', text: 'A wide, practical range of AC and HVAC materials kept easy to browse and enquire about.' },
@@ -24,6 +26,12 @@ export default function AboutPage() {
 				<title>About Supreme AC Works — AC Spare Parts & HVAC Materials Supplier</title>
 				<meta name="description" content="Supreme AC Works provides AC spare parts, refrigerants and HVAC installation materials for technicians, contractors, dealers and professional customers across India." />
 			</Helmet>
+			<Seo
+				title="About Supreme AC Works — AC Spare Parts & HVAC Materials Supplier"
+				description="Supreme AC Works provides AC spare parts, refrigerants and HVAC installation materials for technicians, contractors, dealers and professional customers across India."
+				siteName={siteName}
+				image={defaultOgImage}
+			/>
 			<SiteHeader />
 
 			<section className="saw-page-head">

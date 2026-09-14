@@ -4,6 +4,7 @@ import { Phone, MessageCircle, Mail, MapPin, Clock, User } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import EnquiryForm from '@/components/site/EnquiryForm';
+import Seo from '@/components/Seo';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
 import {
 	businessLocations,
@@ -14,6 +15,8 @@ import {
 	businessMapLink,
 	businessHours,
 	whatsAppDisplay,
+	siteName,
+	defaultOgImage,
 } from '@/data/siteMeta';
 
 const CONTACT_ROWS = [
@@ -33,6 +36,12 @@ export default function ContactPage() {
 				<title>Contact Supreme AC Works — AC Spare Parts & HVAC Materials Enquiry</title>
 				<meta name="description" content="Contact Supreme AC Works for AC spare parts, refrigerant gases, copper pipes and HVAC materials. Call, WhatsApp or send an enquiry for price and availability." />
 			</Helmet>
+			<Seo
+				title="Contact Supreme AC Works — AC Spare Parts & HVAC Materials Enquiry"
+				description="Contact Supreme AC Works for AC spare parts, refrigerant gases, copper pipes and HVAC materials. Call, WhatsApp or send an enquiry for price and availability."
+				siteName={siteName}
+				image={defaultOgImage}
+			/>
 			<SiteHeader />
 
 			<section className="saw-page-head">

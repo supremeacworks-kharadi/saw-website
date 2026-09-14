@@ -5,9 +5,11 @@ import { Search, MessageCircle } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard from '@/components/site/ProductCard';
+import Seo from '@/components/Seo';
 import { CATEGORIES, matchCategory } from '@/data/catalogue';
 import { getVariantPriceAmount } from '@/components/builder/blocks/ecommerceHelpers.js';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
+import { siteName, defaultOgImage } from '@/data/siteMeta';
 
 const SORTS = [
 	{ value: 'relevance', label: 'Relevance' },
@@ -95,6 +97,12 @@ export default function ShopPage() {
 				<title>Shop AC Spare Parts, Refrigerants & HVAC Materials — Supreme AC Works</title>
 				<meta name="description" content="Browse AC spare parts, refrigerant gases (R32, R410A, R134a), copper pipes, compressors, motors, insulation, electrical material, AC stands and HVAC tools at Supreme AC Works. Enquire on WhatsApp for best price." />
 			</Helmet>
+			<Seo
+				title="Shop AC Spare Parts, Refrigerants & HVAC Materials — Supreme AC Works"
+				description="Browse AC spare parts, refrigerant gases (R32, R410A, R134a), copper pipes, compressors, motors, insulation, electrical material, AC stands and HVAC tools at Supreme AC Works."
+				siteName={siteName}
+				image={defaultOgImage}
+			/>
 			<SiteHeader />
 
 			<section className="saw-page-head">

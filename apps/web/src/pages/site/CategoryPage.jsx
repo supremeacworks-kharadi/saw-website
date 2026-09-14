@@ -6,8 +6,10 @@ import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard from '@/components/site/ProductCard';
 import CategoryGrid from '@/components/site/CategoryGrid';
+import Seo from '@/components/Seo';
 import { getCategoryBySlug, matchCategory } from '@/data/catalogue';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
+import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
 export default function CategoryPage() {
 	const { slug } = useParams();
@@ -59,7 +61,24 @@ export default function CategoryPage() {
 			<Helmet>
 				<title>{category.name} — Supreme AC Works | AC Spare Parts Supplier India</title>
 				<meta name="description" content={`${category.name} at Supreme AC Works — ${category.tagline} Enquire on WhatsApp for best price and availability.`} />
+				<script type="application/ld+json">
+					{JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+							{ '@type': 'ListItem', position: 2, name: 'Categories', item: `${siteUrl}/categories` },
+							{ '@type': 'ListItem', position: 3, name: category.name, item: `${siteUrl}/category/${category.slug}` },
+						],
+					})}
+				</script>
 			</Helmet>
+			<Seo
+				title={`${category.name} — Supreme AC Works | AC Spare Parts Supplier India`}
+				description={`${category.name} at Supreme AC Works — ${category.tagline} Enquire on WhatsApp for best price and availability.`}
+				siteName={siteName}
+				image={defaultOgImage}
+			/>
 			<SiteHeader />
 
 			<section className="saw-page-head saw-page-head--category">

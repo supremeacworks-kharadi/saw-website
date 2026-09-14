@@ -4,7 +4,9 @@ import { MessageCircle, Package, Truck, IndianRupee } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import EnquiryForm from '@/components/site/EnquiryForm';
+import Seo from '@/components/Seo';
 import { buildWhatsAppLink, BULK_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
+import { siteName, defaultOgImage } from '@/data/siteMeta';
 
 const BULK_POINTS = [
 	{ icon: Package, title: 'Contractor Supplies', text: 'Regular material supply for AC installation and service teams.' },
@@ -19,6 +21,12 @@ export default function BulkEnquiryPage() {
 				<title>Bulk & Wholesale Enquiry — AC Spare Parts & HVAC Materials | Supreme AC Works</title>
 				<meta name="description" content="Request a bulk quote from Supreme AC Works for refrigerant gases, copper pipes, AC spare parts and HVAC installation materials. Contractor supplies and wholesale enquiries welcome." />
 			</Helmet>
+			<Seo
+				title="Bulk & Wholesale Enquiry — AC Spare Parts & HVAC Materials | Supreme AC Works"
+				description="Request a bulk quote from Supreme AC Works for refrigerant gases, copper pipes, AC spare parts and HVAC installation materials. Contractor supplies and wholesale enquiries welcome."
+				siteName={siteName}
+				image={defaultOgImage}
+			/>
 			<SiteHeader />
 
 			<section className="saw-page-head saw-page-head--red">

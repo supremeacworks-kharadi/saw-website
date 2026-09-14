@@ -11,6 +11,12 @@ export const whatsAppMessage =
 // Floating WhatsApp button shown on every page (mobile + desktop).
 export const isFloatingWhatsAppWidgetEnabled = true;
 
+// ─── SEO ────────────────────────────────────────────────────────────────────
+// Canonical site URL (no trailing slash) and default social share image.
+export const siteUrl = "https://supremeacworks.com";
+export const siteName = "Supreme AC Works";
+export const defaultOgImage = `${siteUrl}/branding/logo-full-v2.png`;
+
 // Add all shops/branches here. Mark one with `isPrimary: true`.
 // The footer and quick action buttons use the primary location details.
 export const businessLocations = [
