@@ -3,6 +3,7 @@ import React, {
 	useContext,
 	useEffect,
 	useMemo,
+	useRef,
 	useState,
 } from 'react';
 import QuantityPicker from './QuantityPicker.jsx';
@@ -12,6 +13,7 @@ import { buildWhatsAppLink, enquiryListMessage } from '@/lib/whatsapp';
 const EcommerceCartContext = createContext(null);
 const STORAGE_KEY = 'enquiry-list-items';
 const STORAGE_TTL_MS = 24 * 60 * 60 * 1000;
+const AUTO_CLOSE_MS = 3000;
 
 function readStoredItems() {
 	if (typeof window === 'undefined') {
@@ -52,10 +54,21 @@ function persistItems(items) {
 export function EcommerceCartProvider({ children }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [items, setItems] = useState(() => readStoredItems());
+	const autoCloseTimer = useRef(null);
 
 	useEffect(() => {
 		persistItems(items);
 	}, [items]);
+
+	const clearAutoClose = () => {
+		if (autoCloseTimer.current) {
+			clearTimeout(autoCloseTimer.current);
+			autoCloseTimer.current = null;
+		}
+	};
+
+	// Clean up any pending timer on unmount.
+	useEffect(() => clearAutoClose, []);
 
 	const api = useMemo(() => {
 		const itemCount = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
@@ -64,9 +77,20 @@ export function EcommerceCartProvider({ children }) {
 			isOpen,
 			items,
 			itemCount,
-			openCart: () => setIsOpen(true),
-			closeCart: () => setIsOpen(false),
-			toggleCart: () => setIsOpen((current) => !current),
+			isInCart: (key) => items.some((entry) => (entry.variant_id || entry.id) === key),
+			openCart: () => {
+				clearAutoClose();
+				setIsOpen(true);
+			},
+			closeCart: () => {
+				clearAutoClose();
+				setIsOpen(false);
+			},
+			toggleCart: () => {
+				clearAutoClose();
+				setIsOpen((current) => !current);
+			},
+			cancelAutoClose: clearAutoClose,
 			setItems,
 			addItem: (item) => {
 				setItems((current) => {
@@ -88,6 +112,12 @@ export function EcommerceCartProvider({ children }) {
 					}];
 				});
 				setIsOpen(true);
+				// Briefly reveal the enquiry list, then slide it away automatically.
+				clearAutoClose();
+				autoCloseTimer.current = setTimeout(() => {
+					setIsOpen(false);
+					autoCloseTimer.current = null;
+				}, AUTO_CLOSE_MS);
 			},
 			removeItem: (itemId) => {
 				setItems((current) => current.filter((entry) => (entry.variant_id || entry.id) !== itemId));
@@ -123,6 +153,7 @@ export function EcommerceCartProvider({ children }) {
 				onRemove={api.removeItem}
 				onQuantityChange={api.setItemQuantity}
 				onSendEnquiry={api.sendEnquiry}
+				onInteract={api.cancelAutoClose}
 			/>
 		</EcommerceCartContext.Provider>
 	);
@@ -135,9 +166,11 @@ export function useEcommerceCart() {
 			isOpen: false,
 			items: [],
 			itemCount: 0,
+			isInCart: () => false,
 			openCart: () => {},
 			closeCart: () => {},
 			toggleCart: () => {},
+			cancelAutoClose: () => {},
 			setItems: () => {},
 			addItem: () => {},
 			removeItem: () => {},
@@ -157,6 +190,7 @@ export default function EcommerceCart({
 	onRemove,
 	onQuantityChange,
 	onSendEnquiry,
+	onInteract,
 }) {
 	const [showForm, setShowForm] = useState(false);
 	const [customerName, setCustomerName] = useState('');
@@ -181,15 +215,15 @@ export default function EcommerceCart({
 		}
 	};
 
-	if (!isOpen) {
-		return null;
-	}
-
 	return (
 		<aside
-			className="ecommerce-cart cart-drawer"
+			className={`ecommerce-cart cart-drawer${isOpen ? ' is-open' : ''}`}
 			role="dialog"
 			aria-label="Enquiry list"
+			aria-hidden={!isOpen}
+			onMouseEnter={onInteract}
+			onMouseDown={onInteract}
+			onTouchStart={onInteract}
 		>
 			<header className="ecommerce-cart__header">
 				<strong>Enquiry List</strong>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ClipboardList, MessageCircle } from 'lucide-react';
+import { ClipboardList, Check, MessageCircle } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import {
 	getProductImage,
@@ -28,15 +28,21 @@ export function getProductPrice(product, variant) {
 }
 
 export default function ProductCard({ product }) {
-	const { addItem } = useEcommerceCart();
+	const { addItem, removeItem, isInCart } = useEcommerceCart();
 	const variant = (product?.variants || [])[0];
 	const price = getProductPrice(product, variant);
 	const sku = getProductSku(product, variant);
 	const image = getProductImage(product) || productPlaceholderImage;
 	const category = matchCategory(product);
 	const isPurchasable = product?.purchasable !== false;
+	const itemKey = variant?.id || product?.id;
+	const inList = isInCart(itemKey);
 
-	const handleAdd = () => {
+	const handleToggle = () => {
+		if (inList) {
+			removeItem(itemKey);
+			return;
+		}
 		addItem({
 			id: product.id,
 			variant_id: variant?.id || product.id,
@@ -77,8 +83,17 @@ export default function ProductCard({ product }) {
 				</div>
 				<div className="saw-product-card__actions">
 					{isPurchasable ? (
-						<button type="button" className="saw-btn saw-btn--red saw-btn--sm" onClick={handleAdd}>
-							<ClipboardList size={15} strokeWidth={2.4} /> Add to Enquiry
+						<button
+							type="button"
+							className={`saw-btn saw-btn--sm ${inList ? 'saw-btn--added' : 'saw-btn--red'}`}
+							onClick={handleToggle}
+							aria-pressed={inList}
+						>
+							{inList ? (
+								<><Check size={15} strokeWidth={2.6} /> Added — Remove</>
+							) : (
+								<><ClipboardList size={15} strokeWidth={2.4} /> Add to Enquiry</>
+							)}
 						</button>
 					) : null}
 					<a

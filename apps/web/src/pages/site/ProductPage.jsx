@@ -21,7 +21,7 @@ import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
 export default function ProductPage() {
 	const { slug } = useParams();
-	const { addItem } = useEcommerceCart();
+	const { addItem, removeItem, isInCart } = useEcommerceCart();
 	const [product, setProduct] = useState(null);
 	const [allProducts, setAllProducts] = useState([]);
 	const [status, setStatus] = useState('loading');
@@ -123,6 +123,11 @@ export default function ProductPage() {
 
 	const handleAdd = () => {
 		if (!product) return;
+		const itemKey = variant?.id || product.id;
+		if (isInCart(itemKey)) {
+			removeItem(itemKey);
+			return;
+		}
 		addItem({
 			id: product.id,
 			variant_id: variant?.id || product.id,
@@ -248,8 +253,17 @@ export default function ProductPage() {
 									</div>
 
 									<div className="saw-product__actions">
-										<button type="button" className="saw-btn saw-btn--red saw-btn--lg" onClick={handleAdd}>
-											<ClipboardList size={17} strokeWidth={2.2} /> Add to Enquiry
+										<button
+											type="button"
+											className={`saw-btn saw-btn--lg ${isInCart(variant?.id || product.id) ? 'saw-btn--added' : 'saw-btn--red'}`}
+											onClick={handleAdd}
+											aria-pressed={isInCart(variant?.id || product.id)}
+										>
+											{isInCart(variant?.id || product.id) ? (
+												<><Check size={17} strokeWidth={2.4} /> Added — Remove</>
+											) : (
+												<><ClipboardList size={17} strokeWidth={2.2} /> Add to Enquiry</>
+											)}
 										</button>
 										<a
 											className="saw-btn saw-btn--whatsapp saw-btn--lg"
