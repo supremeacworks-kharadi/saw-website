@@ -403,6 +403,10 @@ export default defineConfig({
 		},
 	},
 	build: {
+		// outDir is outside the project root (../../dist/apps/web); Vite skips
+		// auto-cleaning it by default, which leaves stale hashed bundles behind
+		// and can cause a cached index.html to reference old JS after deploy.
+		emptyOutDir: true,
 		rollupOptions: {
 			external: [
 				'@babel/parser',
