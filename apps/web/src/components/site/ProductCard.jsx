@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, MessageCircle } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Ruler } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import {
 	getProductImage,
@@ -29,7 +29,11 @@ export function getProductPrice(product, variant) {
 
 export default function ProductCard({ product }) {
 	const { addItem } = useEcommerceCart();
-	const variant = (product?.variants || [])[0];
+	const variants = product?.variants || [];
+	const variant = variants[0];
+	// Products with more than one variant need a size/option choice — we route to
+	// the product page instead of silently adding the first variant.
+	const hasVariantChoice = variants.length > 1;
 	const price = getProductPrice(product, variant);
 	const sku = getProductSku(product, variant);
 	const image = getProductImage(product) || productPlaceholderImage;
@@ -72,13 +76,27 @@ export default function ProductCard({ product }) {
 					) : (
 						<span className="saw-product-card__price saw-product-card__price--enquiry">Price on enquiry</span>
 					)}
-					{sku ? <span className="saw-product-card__sku">SKU: {sku}</span> : null}
+					{hasVariantChoice ? (
+						<span className="saw-product-card__variant-hint">{variants.length} sizes available</span>
+					) : sku ? (
+						<span className="saw-product-card__sku">SKU: {sku}</span>
+					) : null}
 				</div>
 				<div className="saw-product-card__actions">
 					{isPurchasable ? (
-						<button type="button" className="saw-btn saw-btn--red saw-btn--sm" onClick={handleAdd}>
-							<ShoppingCart size={15} strokeWidth={2.4} /> Add to Cart
-						</button>
+						hasVariantChoice ? (
+							<Link
+								to={getProductHref(product)}
+								className="saw-btn saw-btn--red saw-btn--sm"
+								aria-label={`Select a size for ${product?.title}`}
+							>
+								<Ruler size={15} strokeWidth={2.4} /> Select Size
+							</Link>
+						) : (
+							<button type="button" className="saw-btn saw-btn--red saw-btn--sm" onClick={handleAdd}>
+								<ShoppingCart size={15} strokeWidth={2.4} /> Add to Cart
+							</button>
+						)
 					) : null}
 					<a
 						className="saw-btn saw-btn--whatsapp-outline saw-btn--sm"

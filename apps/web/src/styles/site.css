@@ -638,6 +638,14 @@ h1, h2, h3, .saw-logo__text strong {
 .saw-product-card__price { font-size: 16px; font-weight: 700; color: var(--saw-dark); }
 .saw-product-card__price--enquiry { font-size: 13px; color: var(--saw-muted); font-weight: 600; }
 .saw-product-card__sku { font-size: 11px; color: var(--saw-muted); }
+.saw-product-card__variant-hint {
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--saw-red);
+	background: rgba(225, 29, 42, 0.08);
+	padding: 2px 8px;
+	border-radius: 999px;
+}
 
 .saw-product-card__actions {
 	display: flex;
