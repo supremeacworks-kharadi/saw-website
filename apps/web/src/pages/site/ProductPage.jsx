@@ -27,6 +27,7 @@ export default function ProductPage() {
 	const [status, setStatus] = useState('loading');
 	const [quantity, setQuantity] = useState(1);
 	const [activeImage, setActiveImage] = useState(0);
+	const [selectedVariantId, setSelectedVariantId] = useState('');
 
 	useEffect(() => {
 		let cancelled = false;
@@ -34,12 +35,18 @@ export default function ProductPage() {
 		setProduct(null);
 		setActiveImage(0);
 		setQuantity(1);
+		setSelectedVariantId('');
 		(async () => {
 			try {
 				const api = await import('@/api/EcommerceApi.js');
 				let result = null;
 				if (api.getProductBySlug) {
-					result = await api.getProductBySlug(slug);
+					try {
+						result = await api.getProductBySlug(slug);
+					} catch (slugErr) {
+						// Slug lookup failed (e.g. the URL used a product id). Fall back to the list below.
+						result = null;
+					}
 				}
 				if (!result && api.getProducts) {
 					const list = await api.getProducts({ limit: 100, exclude_types: 'subscription' });
@@ -59,9 +66,14 @@ export default function ProductPage() {
 		return () => { cancelled = true; };
 	}, [slug]);
 
-	const variant = (product?.variants || [])[0];
+	const variants = product?.variants || [];
+	const variant = variants.find((v) => v.id === selectedVariantId) || variants[0];
+	const hasVariantChoice = variants.length > 1;
+	const variantLabel = hasVariantChoice ? (variant?.title || '') : '';
+	const enquiryName = variantLabel ? `${product?.title} — ${variantLabel}` : product?.title;
 	const price = variant?.sale_price_formatted || variant?.price_formatted || product?.price_formatted || '';
 	const sku = variant?.sku || product?.sku || '';
+	const inCart = variant ? isInCart(variant.id) : false;
 	const images = useMemo(() => {
 		const list = getProductImages(product);
 		return list.length ? list : [productPlaceholderImage].filter(Boolean);
@@ -243,6 +255,30 @@ export default function ProductPage() {
 										Prices can change with market rates. Use <strong>Get Best Price</strong> for today's rate and availability.
 									</p>
 
+									{hasVariantChoice ? (
+										<div className="saw-product__variants">
+											<span className="saw-product__variants-label">
+												Option{variant?.title ? <>: <strong>{variant.title}</strong></> : null}
+											</span>
+											<div className="saw-product__variant-chips">
+												{variants.map((v) => (
+													<button
+														key={v.id}
+														type="button"
+														className={`saw-variant-chip${v.id === variant?.id ? ' is-active' : ''}`}
+														onClick={() => {
+															setSelectedVariantId(v.id);
+															if (isInCart(v.id)) return;
+														}}
+														aria-pressed={v.id === variant?.id}
+													>
+														{v.title}
+													</button>
+												))}
+											</div>
+										</div>
+									) : null}
+
 									<div className="saw-product__qty">
 										<span>Quantity</span>
 										<div className="saw-qty">
@@ -258,11 +294,15 @@ export default function ProductPage() {
 											className="saw-btn saw-btn--red saw-btn--lg"
 											onClick={handleAdd}
 										>
-											<ShoppingCart size={17} strokeWidth={2.2} /> Add to Cart
+											{inCart ? (
+												<><Check size={17} strokeWidth={2.4} /> Added — Remove</>
+											) : (
+												<><ShoppingCart size={17} strokeWidth={2.2} /> Add to Cart</>
+											)}
 										</button>
 										<a
 											className="saw-btn saw-btn--whatsapp saw-btn--lg"
-											href={buildWhatsAppLink(productEnquiryMessage({ name: product.title, sku, quantity }))}
+											href={buildWhatsAppLink(productEnquiryMessage({ name: enquiryName, sku, quantity }))}
 											target="_blank"
 											rel="noopener noreferrer"
 										>
@@ -270,7 +310,7 @@ export default function ProductPage() {
 										</a>
 										<a
 											className="saw-btn saw-btn--dark-outline saw-btn--lg"
-											href={buildWhatsAppLink(bestPriceMessage({ name: product.title, sku }))}
+											href={buildWhatsAppLink(bestPriceMessage({ name: enquiryName, sku }))}
 											target="_blank"
 											rel="noopener noreferrer"
 										>

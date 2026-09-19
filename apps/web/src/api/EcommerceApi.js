@@ -414,6 +414,38 @@ const getProductPrice = (product) => {
  *
  * @returns {Promise<GetProductsResponse>} Response object with paginated products
  */
+
+// Cache of collection_id -> title, so products can be tagged with the store
+// collection (category) they belong to. Collections rarely change per session.
+let _collectionTitleMapPromise = null;
+function getCollectionTitleMap() {
+  if (!_collectionTitleMapPromise) {
+    _collectionTitleMapPromise = getCategories()
+      .then(({ categories }) => {
+        const map = {};
+        (categories || []).forEach((c) => {
+          if (c?.id) map[c.id] = c.title || "";
+        });
+        return map;
+      })
+      .catch(() => ({}));
+  }
+  return _collectionTitleMapPromise;
+}
+
+// Tag each product with `collection_titles` (resolved store collection names),
+// enabling deterministic, dashboard-driven categorisation on the site.
+async function attachCollectionTitles(products) {
+  if (!Array.isArray(products) || products.length === 0) return products;
+  const map = await getCollectionTitleMap();
+  products.forEach((product) => {
+    product.collection_titles = (product.collections || [])
+      .map((c) => map[c.collection_id])
+      .filter(Boolean);
+  });
+  return products;
+}
+
 export async function getProducts({
   ids,
   offset,
@@ -500,16 +532,13 @@ export async function getProducts({
   }
 
   const data = await response.json();
-  return {
-    count: data.count,
-    offset: data.offset,
-    limit: data.limit,
-    products: data.products.map((product) => {
+  const products = data.products.map((product) => {
       const { price_in_cents, currency, currency_info } = getProductPrice(product);
 
       return {
         id: product.id,
         title: product.title,
+        slug: product.slug || product.seo_settings?.slug || null,
         subtitle: product.subtitle,
         ribbon_text: product.ribbon_text,
         description: product.description,
@@ -534,7 +563,15 @@ export async function getProducts({
         reviews_analytics: product.reviewsAnalytics || null,
         updated_at: product.updated_at,
       };
-    }),
+    });
+
+  await attachCollectionTitles(products);
+
+  return {
+    count: data.count,
+    offset: data.offset,
+    limit: data.limit,
+    products,
   };
 }
 
@@ -584,9 +621,10 @@ export async function getProduct(id, { field } = {}) {
 
   const { price_in_cents, currency, currency_info } = getProductPrice(product);
 
-  return {
+  const normalized = {
     id: product.id,
     title: product.title,
+    slug: product.slug || product.seo_settings?.slug || null,
     subtitle: product.subtitle,
     ribbon_text: product.ribbon_text,
     description: product.description,
@@ -615,6 +653,10 @@ export async function getProduct(id, { field } = {}) {
     deleted_at: product.deleted_at,
     metadata: product.metadata,
   };
+
+  await attachCollectionTitles([normalized]);
+
+  return normalized;
 }
 
 /**

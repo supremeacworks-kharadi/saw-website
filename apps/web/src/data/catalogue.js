@@ -31,6 +31,7 @@ export const CATEGORIES = [
 		name: 'Copper Pipes & Coils',
 		tagline: 'AC copper pipe coils and straight pipes in all standard sizes.',
 		image: IMAGES.copper,
+		collections: ['copper tubes and pipes'],
 		keywords: ['copper', 'pipe', 'coil', 'pancake', 'tube'],
 		specFields: ['Size', 'Thickness', 'Length', 'Coil / straight', 'Brand', 'Price per meter', 'Price per coil', 'SKU'],
 		popular: ['1/4" copper pipe', '3/8" copper pipe', '5/8" copper pipe', '1 1/8" copper pipe'],
@@ -47,17 +48,26 @@ export const CATEGORIES = [
 	{
 		slug: 'ac-motors',
 		name: 'AC Motors',
-		tagline: 'Indoor fan, outdoor fan, condenser and blower motors.',
+		tagline: 'Indoor fan, outdoor fan, condenser, ductable and blower motors.',
 		image: IMAGES.motors,
+		// Store collections (Hostinger dashboard) that belong to this category.
+		collections: ['ductable odu motor', 'air conditioner outdoor motor', 'indoor unit motor', 'ac motors'],
 		keywords: ['motor', 'blower', 'fan motor'],
 		specFields: ['Model number', 'Voltage', 'RPM', 'Wattage', 'Application', 'Direction', 'Brand', 'SKU'],
 		popular: ['indoor fan motor', 'outdoor fan motor', 'condenser motor', 'blower motor'],
+		// Sub-categories, driven by store collections (with keyword fallback).
+		subcategories: [
+			{ slug: 'outdoor-unit-motor', name: 'Outdoor Unit Motor', collections: ['air conditioner outdoor motor'], keywords: ['outdoor', ' odu', 'odu '] },
+			{ slug: 'ductable-motor', name: 'Ductable Motor', collections: ['ductable odu motor'], keywords: ['ductable'] },
+			{ slug: 'indoor-unit-motor', name: 'Indoor Unit Motor', collections: ['indoor unit motor'], keywords: ['indoor', ' idu', 'idu '] },
+		],
 	},
 	{
 		slug: 'insulation',
 		name: 'Insulation',
 		tagline: '9 mm, 13 mm and other insulation tubes — by meter, roll or coil.',
 		image: IMAGES.insulation,
+		collections: ['insulation tubes'],
 		keywords: ['insulation', 'foam', 'nitrile'],
 		specFields: ['Pipe size', 'Thickness', 'Length', 'Brand', 'Sold by', 'SKU', 'Availability'],
 		popular: ['9 mm insulation', '13 mm insulation', 'insulation tube'],
@@ -67,6 +77,7 @@ export const CATEGORIES = [
 		name: 'Wires & Electrical',
 		tagline: 'Flexible wires, 4-core wire, capacitors, contactors, relays & terminals.',
 		image: IMAGES.electrical,
+		collections: ['wires and cables'],
 		keywords: ['wire', 'capacitor', 'contactor', 'relay', 'terminal', 'electrical', 'cable', '4 core', '4-core'],
 		specFields: ['Type', 'Size / rating', 'Voltage', 'Brand', 'SKU', 'Availability'],
 		popular: ['4 core flexible wire', 'AC capacitor', 'contactor', 'AC wire'],
@@ -76,6 +87,7 @@ export const CATEGORIES = [
 		name: 'AC Stands',
 		tagline: 'Outdoor unit stands, heavy-duty and wall-mount brackets.',
 		image: IMAGES.stands,
+		collections: ['stands and mounting'],
 		keywords: ['stand', 'bracket', 'mount'],
 		specFields: ['Size', 'Material', 'Load capacity', 'Finish', 'SKU', 'Availability'],
 		popular: ['outdoor AC stand', 'heavy duty stand', 'wall mount bracket'],
@@ -109,12 +121,70 @@ export const CATEGORIES = [
 	},
 ];
 
-/** Match a store product to a catalogue category by title + description. */
-export function matchCategory(product) {
-	const haystack = `${product?.title || ''} ${product?.description || ''}`.toLowerCase();
+/**
+ * Match a store product to a catalogue category.
+ *
+ * Strategy (in order):
+ *  1. Store collection (Hostinger dashboard) — deterministic and user-controlled.
+ *     Products carry `collection_titles` (added by the API layer); if any matches
+ *     a category's `collections`, that category wins. This is the reliable path.
+ *  2. Keyword score fallback — for products not yet assigned to a collection,
+ *     pick the category with the most keyword hits (specific beats generic, so
+ *     "Nitrile Foam Tubes" lands in Insulation, not Copper).
+ */
+function matchByCollection(product) {
+	const titles = (product?.collection_titles || []).map((t) => t.toLowerCase());
+	if (!titles.length) return null;
 	return CATEGORIES.find((category) =>
-		category.keywords.some((keyword) => haystack.includes(keyword)),
+		(category.collections || []).some((name) => titles.includes(name)),
 	) || null;
+}
+
+function matchByKeywordScore(product) {
+	const haystack = `${product?.title || ''} ${product?.description || ''}`.toLowerCase();
+	let best = null;
+	let bestScore = 0;
+	for (const category of CATEGORIES) {
+		const score = (category.keywords || []).reduce(
+			(count, keyword) => (haystack.includes(keyword) ? count + 1 : count),
+			0,
+		);
+		if (score > bestScore) {
+			bestScore = score;
+			best = category;
+		}
+	}
+	return best;
+}
+
+export function matchCategory(product) {
+	return matchByCollection(product) || matchByKeywordScore(product);
+}
+
+/**
+ * Match a product to a sub-category within its category (e.g. AC Motors →
+ * Outdoor / Ductable / Indoor). Collection membership wins, keyword fallback next.
+ * Returns `{ category, subcategory }` or null.
+ */
+export function matchSubcategory(product) {
+	const category = matchCategory(product);
+	if (!category?.subcategories?.length) return null;
+	const titles = (product?.collection_titles || []).map((t) => t.toLowerCase());
+	const byCollection = category.subcategories.find((sub) =>
+		(sub.collections || []).some((name) => titles.includes(name)),
+	);
+	if (byCollection) return { category, subcategory: byCollection };
+	const haystack = `${product?.title || ''} ${product?.description || ''}`.toLowerCase();
+	const byKeyword = category.subcategories.find((sub) =>
+		(sub.keywords || []).some((keyword) => haystack.includes(keyword)),
+	);
+	return byKeyword ? { category, subcategory: byKeyword } : { category, subcategory: null };
+}
+
+export function getSubcategory(categorySlug, subSlug) {
+	const category = getCategoryBySlug(categorySlug);
+	if (!category?.subcategories) return null;
+	return category.subcategories.find((sub) => sub.slug === subSlug) || null;
 }
 
 export function getCategoryBySlug(slug) {

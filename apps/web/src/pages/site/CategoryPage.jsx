@@ -1,18 +1,20 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { MessageCircle, ArrowRight, Check } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard from '@/components/site/ProductCard';
 import CategoryGrid from '@/components/site/CategoryGrid';
 import Seo from '@/components/Seo';
-import { getCategoryBySlug, matchCategory } from '@/data/catalogue';
+import { getCategoryBySlug, matchCategory, matchSubcategory } from '@/data/catalogue';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
 export default function CategoryPage() {
 	const { slug } = useParams();
+	const [searchParams, setSearchParams] = useSearchParams();
+	const activeSub = searchParams.get('sub') || 'all';
 	const category = getCategoryBySlug(slug);
 	const [products, setProducts] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +40,21 @@ export default function CategoryPage() {
 		() => (category ? products.filter((product) => matchCategory(product)?.slug === category.slug) : []),
 		[products, category],
 	);
+
+	const subcategories = category?.subcategories || [];
+	const visibleProducts = useMemo(() => {
+		if (activeSub === 'all' || !subcategories.length) return categoryProducts;
+		return categoryProducts.filter(
+			(product) => matchSubcategory(product)?.subcategory?.slug === activeSub,
+		);
+	}, [categoryProducts, activeSub, subcategories.length]);
+
+	const setSub = (value) => {
+		const next = new URLSearchParams(searchParams);
+		if (value && value !== 'all') next.set('sub', value);
+		else next.delete('sub');
+		setSearchParams(next, { replace: true });
+	};
 
 	if (!category) {
 		return (
@@ -103,15 +120,37 @@ export default function CategoryPage() {
 
 			<section className="saw-section saw-section--flush-top">
 				<div className="saw-container">
+					{subcategories.length ? (
+						<div className="saw-chips saw-chips--scroll saw-subcat-chips">
+							<button
+								type="button"
+								className={`saw-chip ${activeSub === 'all' ? 'is-active' : ''}`}
+								onClick={() => setSub('all')}
+							>
+								All {category.name}
+							</button>
+							{subcategories.map((sub) => (
+								<button
+									key={sub.slug}
+									type="button"
+									className={`saw-chip ${activeSub === sub.slug ? 'is-active' : ''}`}
+									onClick={() => setSub(sub.slug)}
+								>
+									{sub.name}
+								</button>
+							))}
+						</div>
+					) : null}
+
 					{isLoading ? (
 						<div className="saw-product-grid">
 							{Array.from({ length: 4 }).map((_, index) => (
 								<div key={index} className="saw-product-card saw-product-card--skeleton" />
 							))}
 						</div>
-					) : categoryProducts.length ? (
+					) : visibleProducts.length ? (
 						<div className="saw-product-grid">
-							{categoryProducts.map((product) => <ProductCard key={product.id} product={product} />)}
+							{visibleProducts.map((product) => <ProductCard key={product.id} product={product} />)}
 						</div>
 					) : (
 						<div className="saw-empty">
