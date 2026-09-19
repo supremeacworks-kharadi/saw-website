@@ -116,6 +116,7 @@ export function EcommerceCartProvider({ children }) {
 			removeItem: (itemId) => {
 				setItems((current) => current.filter((entry) => (entry.variant_id || entry.id) !== itemId));
 			},
+			isInCart: (itemId) => items.some((entry) => (entry.variant_id || entry.id) === itemId),
 			setItemQuantity: (itemId, quantity) => {
 				setItems((current) => (quantity > 0
 					? current.map((entry) => ((entry.variant_id || entry.id) === itemId
@@ -194,6 +195,7 @@ export function useEcommerceCart() {
 			setItems: () => {},
 			addItem: () => {},
 			removeItem: () => {},
+			isInCart: () => false,
 			setItemQuantity: () => {},
 			clearCart: () => {},
 			checkout: async () => {},
