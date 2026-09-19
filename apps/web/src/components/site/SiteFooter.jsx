@@ -30,7 +30,7 @@ export default function SiteFooter() {
 				<div className="saw-footer__brand">
 					<Link to="/" className="saw-logo saw-logo--footer" aria-label="Supreme AC Works — home">
 						<img
-							src="/branding/logo-full-v2.png"
+							src="/branding/logo-full.png"
 							alt="Supreme AC Works"
 							className="saw-logo__image saw-logo__image--footer"
 						/>

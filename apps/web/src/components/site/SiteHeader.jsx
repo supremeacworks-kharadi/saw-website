@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, ClipboardList, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, ShoppingCart, MessageCircle } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
 
@@ -49,7 +49,7 @@ export default function SiteHeader() {
 			<div className="saw-container saw-header__inner">
 				<Link to="/" className="saw-logo" aria-label="Supreme AC Works — home">
 					<img
-						src="/branding/logo-full-v2.png"
+						src="/branding/logo-full.png"
 						alt="Supreme AC Works"
 						className="saw-logo__image saw-logo__image--header"
 					/>
@@ -80,10 +80,10 @@ export default function SiteHeader() {
 					<button
 						type="button"
 						className="saw-icon-btn saw-icon-btn--cart"
-						aria-label="Open enquiry list"
+						aria-label="Open cart"
 						onClick={toggleCart}
 					>
-						<ClipboardList size={20} strokeWidth={2.2} />
+						<ShoppingCart size={20} strokeWidth={2.2} />
 						{itemCount > 0 ? <span className="saw-cart-count">{itemCount}</span> : null}
 					</button>
 					<a

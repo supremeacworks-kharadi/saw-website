@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
-import { ClipboardList, MessageCircle, Tag, Minus, Plus, Check, ChevronRight } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Tag, Minus, Plus, Check, ChevronRight } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard, { getProductHref } from '@/components/site/ProductCard';
@@ -255,15 +255,10 @@ export default function ProductPage() {
 									<div className="saw-product__actions">
 										<button
 											type="button"
-											className={`saw-btn saw-btn--lg ${isInCart(variant?.id || product.id) ? 'saw-btn--added' : 'saw-btn--red'}`}
+											className="saw-btn saw-btn--red saw-btn--lg"
 											onClick={handleAdd}
-											aria-pressed={isInCart(variant?.id || product.id)}
 										>
-											{isInCart(variant?.id || product.id) ? (
-												<><Check size={17} strokeWidth={2.4} /> Added — Remove</>
-											) : (
-												<><ClipboardList size={17} strokeWidth={2.2} /> Add to Enquiry</>
-											)}
+											<ShoppingCart size={17} strokeWidth={2.2} /> Add to Cart
 										</button>
 										<a
 											className="saw-btn saw-btn--whatsapp saw-btn--lg"

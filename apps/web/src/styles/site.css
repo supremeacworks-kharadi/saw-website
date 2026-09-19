@@ -99,13 +99,6 @@ h1, h2, h3, .saw-logo__text strong {
 .saw-btn--red { background: var(--saw-red); color: #ffffff; }
 .saw-btn--red:hover { background: var(--saw-red-dark); }
 
-.saw-btn--added {
-	background: #ecfdf3;
-	color: #157347;
-	border-color: #157347;
-}
-.saw-btn--added:hover { background: #d7f5e3; }
-
 .saw-btn--whatsapp { background: var(--saw-whatsapp); color: #ffffff; }
 .saw-btn--whatsapp:hover { background: var(--saw-whatsapp-dark); }
 
@@ -1427,24 +1420,6 @@ h1, h2, h3, .saw-logo__text strong {
 	padding: 20px;
 	overflow-y: auto;
 	font-family: var(--saw-font-body);
-	transform: translateX(100%);
-	transition: transform 0.34s cubic-bezier(0.16, 0.84, 0.44, 1);
-	will-change: transform;
-	-webkit-overflow-scrolling: touch;
-}
-
-.ecommerce-cart.cart-drawer.is-open {
-	transform: translateX(0);
-}
-
-.ecommerce-cart.cart-drawer:not(.is-open) {
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.ecommerce-cart.cart-drawer {
-		transition: none;
-	}
 }
 
 .ecommerce-cart__header {
@@ -1486,50 +1461,18 @@ h1, h2, h3, .saw-logo__text strong {
 .ecommerce-cart__variant, .ecommerce-cart__meta, .ecommerce-cart__custom-field { font-size: 12.5px; color: var(--saw-muted); margin-top: 3px; }
 .ecommerce-cart__item button { border: none; background: none; color: var(--saw-red); font-size: 12.5px; font-weight: 600; cursor: pointer; align-self: flex-start; }
 
-/* Keep the quantity stepper compact inside the drawer instead of stretching full width */
-.ecommerce-cart .quantity-picker {
-	display: inline-flex;
-	width: max-content;
-	margin-top: 8px;
-	border-radius: 8px;
-	overflow: hidden;
-}
-.ecommerce-cart .quantity-picker__control,
-.ecommerce-cart .quantity-picker__amount {
-	width: var(--size, 32px);
-	flex: 0 0 auto;
-}
-.ecommerce-cart .quantity-picker__control { color: var(--saw-red); font-weight: 600; }
-
 .ecommerce-cart__empty { text-align: center; color: var(--saw-muted); padding: 40px 0; flex: 1; }
 
 .ecommerce-cart__footer { border-top: 1px solid var(--saw-line); padding-top: 14px; }
 .ecommerce-cart__subtotal { display: flex; justify-content: space-between; font-size: 15px; margin: 0 0 12px; }
 .ecommerce-cart__error { color: var(--saw-red-dark); font-size: 13px; }
-.ecommerce-cart__enquiry-note { font-size: 12.5px; color: var(--saw-muted); margin: 0 0 12px; line-height: 1.5; }
-
-.ecommerce-cart__form { display: flex; flex-direction: column; gap: 10px; }
-.ecommerce-cart__field { display: flex; flex-direction: column; gap: 5px; }
-.ecommerce-cart__field span { font-size: 12.5px; font-weight: 600; color: var(--saw-ink); }
-.ecommerce-cart__form-error { color: var(--saw-red-dark); font-size: 12.5px; margin: 0; }
-.ecommerce-cart__form-back {
-	border: none;
-	background: none;
-	color: var(--saw-muted);
-	font-size: 12.5px;
-	font-weight: 600;
-	cursor: pointer;
-	padding: 2px;
-	align-self: center;
-}
-.ecommerce-cart__form-back:hover { color: var(--saw-red); }
 
 .ecommerce-cart__checkout {
 	width: 100%;
 	min-height: 50px;
 	border: none;
 	border-radius: 8px;
-	background: var(--saw-whatsapp);
+	background: var(--saw-red);
 	color: #ffffff;
 	font-family: var(--saw-font-body);
 	font-size: 14px;
@@ -1538,7 +1481,7 @@ h1, h2, h3, .saw-logo__text strong {
 	text-transform: uppercase;
 	cursor: pointer;
 }
-.ecommerce-cart__checkout:hover { filter: brightness(0.95); }
+.ecommerce-cart__checkout:hover { background: var(--saw-red-dark); }
 .ecommerce-cart__checkout:disabled { opacity: 0.5; cursor: default; }
 
 /* ── Reduced motion ── */
