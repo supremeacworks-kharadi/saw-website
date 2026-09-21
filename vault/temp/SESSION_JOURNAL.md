@@ -1598,3 +1598,15 @@
         at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
         at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
 
+## 2026-09-21 14:21:34.331Z load
+- url: http://localhost:3000/product/whirlpool-ac-remote-control-no4a
+- title: Supreme AC Works — AC Spare Parts, Refrigerants & HVAC Materials
+
+## 2026-09-21 14:21:34.331Z load
+- url: http://localhost:3000/shop
+- title: Supreme AC Works — AC Spare Parts, Refrigerants & HVAC Materials
+
+## 2026-09-21 14:21:34.357Z load
+- url: http://localhost:3000/category/pcb-electronics
+- title: Supreme AC Works — AC Spare Parts, Refrigerants & HVAC Materials
+
