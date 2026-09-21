@@ -95,6 +95,7 @@ export default function CategoryPage() {
 				description={`${category.name} at Supreme AC Works — ${category.tagline} Enquire on WhatsApp for best price and availability.`}
 				siteName={siteName}
 				image={defaultOgImage}
+				url={`${siteUrl}/category/${category.slug}`}
 			/>
 			<SiteHeader />
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, Tag, Minus, Plus, Check, ChevronRight } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Tag, Minus, Plus, Check, ChevronRight, X, ChevronLeft, ZoomIn } from 'lucide-react';
 import SiteHeader from '@/components/site/SiteHeader';
 import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard, { getProductHref } from '@/components/site/ProductCard';
@@ -28,6 +28,7 @@ export default function ProductPage() {
 	const [quantity, setQuantity] = useState(1);
 	const [activeImage, setActiveImage] = useState(0);
 	const [selectedVariantId, setSelectedVariantId] = useState('');
+	const [lightboxOpen, setLightboxOpen] = useState(false);
 
 	useEffect(() => {
 		let cancelled = false;
@@ -80,6 +81,26 @@ export default function ProductPage() {
 	}, [product]);
 	const category = product ? matchCategory(product) : null;
 	const additionalInfo = [...(product?.additional_info || [])].sort((a, b) => (a.order || 0) - (b.order || 0));
+
+	const showPrevImage = () => setActiveImage((i) => (i - 1 + images.length) % images.length);
+	const showNextImage = () => setActiveImage((i) => (i + 1) % images.length);
+
+	// Lightbox: lock page scroll while open and wire up keyboard controls (Esc / arrows).
+	useEffect(() => {
+		if (!lightboxOpen) return undefined;
+		const onKey = (e) => {
+			if (e.key === 'Escape') setLightboxOpen(false);
+			else if (e.key === 'ArrowLeft') showPrevImage();
+			else if (e.key === 'ArrowRight') showNextImage();
+		};
+		window.addEventListener('keydown', onKey);
+		const prevOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			window.removeEventListener('keydown', onKey);
+			document.body.style.overflow = prevOverflow;
+		};
+	}, [lightboxOpen, images.length]);
 
 	const related = useMemo(() => {
 		if (!product || !category) return [];
@@ -222,9 +243,15 @@ export default function ProductPage() {
 
 							<div className="saw-product__grid">
 								<div className="saw-product__gallery">
-									<div className="saw-product__main-image">
+									<button
+										type="button"
+										className="saw-product__main-image"
+										onClick={() => setLightboxOpen(true)}
+										aria-label="Enlarge image"
+									>
 										<img src={images[activeImage] || images[0]} alt={product.title} />
-									</div>
+										<span className="saw-product__zoom-hint"><ZoomIn size={16} strokeWidth={2.4} /></span>
+									</button>
 									{images.length > 1 ? (
 										<div className="saw-product__thumbs">
 											{images.map((url, index) => (
@@ -368,6 +395,49 @@ export default function ProductPage() {
 						</section>
 					) : null}
 				</>
+			) : null}
+
+			{lightboxOpen && status === 'ready' && product ? (
+				<div
+					className="saw-lightbox"
+					role="dialog"
+					aria-modal="true"
+					aria-label={`${product.title} image viewer`}
+					onClick={() => setLightboxOpen(false)}
+				>
+					<button type="button" className="saw-lightbox__close" onClick={() => setLightboxOpen(false)} aria-label="Close">
+						<X size={22} strokeWidth={2.4} />
+					</button>
+					{images.length > 1 ? (
+						<button
+							type="button"
+							className="saw-lightbox__nav saw-lightbox__nav--prev"
+							onClick={(e) => { e.stopPropagation(); showPrevImage(); }}
+							aria-label="Previous image"
+						>
+							<ChevronLeft size={26} strokeWidth={2.4} />
+						</button>
+					) : null}
+					<img
+						className="saw-lightbox__image"
+						src={images[activeImage] || images[0]}
+						alt={product.title}
+						onClick={(e) => e.stopPropagation()}
+					/>
+					{images.length > 1 ? (
+						<button
+							type="button"
+							className="saw-lightbox__nav saw-lightbox__nav--next"
+							onClick={(e) => { e.stopPropagation(); showNextImage(); }}
+							aria-label="Next image"
+						>
+							<ChevronRight size={26} strokeWidth={2.4} />
+						</button>
+					) : null}
+					{images.length > 1 ? (
+						<span className="saw-lightbox__counter">{activeImage + 1} / {images.length}</span>
+					) : null}
+				</div>
 			) : null}
 
 			<SiteFooter />

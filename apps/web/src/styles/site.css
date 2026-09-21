@@ -595,8 +595,10 @@ h1, h2, h3, .saw-logo__text strong {
 	to { background-position: -80% 0; }
 }
 
-.saw-product-card__media { display: block; aspect-ratio: 1 / 1; background: #f1f4f7; overflow: hidden; }
-.saw-product-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.saw-product-card__media { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; background: #ffffff; overflow: hidden; padding: 10px; box-sizing: border-box; }
+/* Cap images to their natural size so small / non-square images are never upscaled.
+   Large 1:1 images still fill the frame; others render at true size, centered. */
+.saw-product-card__media img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 
 .saw-product-card__body {
 	display: flex;
@@ -1138,9 +1140,116 @@ h1, h2, h3, .saw-logo__text strong {
 	overflow: hidden;
 	background: #ffffff;
 	aspect-ratio: 1 / 1;
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	cursor: zoom-in;
 }
 
 .saw-product__main-image img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 16px; }
+
+.saw-product__zoom-hint {
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: rgba(17, 24, 39, 0.72);
+	color: #ffffff;
+	opacity: 0;
+	transition: opacity 0.18s ease;
+	pointer-events: none;
+}
+
+.saw-product__main-image:hover .saw-product__zoom-hint,
+.saw-product__main-image:focus-visible .saw-product__zoom-hint { opacity: 1; }
+
+/* Fullscreen image lightbox */
+.saw-lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	background: rgba(10, 12, 16, 0.9);
+	animation: saw-lightbox-fade 0.16s ease;
+	cursor: zoom-out;
+}
+
+@keyframes saw-lightbox-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.saw-lightbox__image {
+	max-width: min(92vw, 1100px);
+	max-height: 88vh;
+	object-fit: contain;
+	border-radius: 8px;
+	background: #ffffff;
+	cursor: default;
+}
+
+.saw-lightbox__close {
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	width: 44px;
+	height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.12);
+	color: #ffffff;
+	cursor: pointer;
+	transition: background 0.16s ease;
+}
+
+.saw-lightbox__close:hover { background: rgba(255, 255, 255, 0.24); }
+
+.saw-lightbox__nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 48px;
+	height: 48px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.12);
+	color: #ffffff;
+	cursor: pointer;
+	transition: background 0.16s ease;
+}
+
+.saw-lightbox__nav:hover { background: rgba(255, 255, 255, 0.24); }
+.saw-lightbox__nav--prev { left: 18px; }
+.saw-lightbox__nav--next { right: 18px; }
+
+.saw-lightbox__counter {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: rgba(255, 255, 255, 0.82);
+	font-size: 14px;
+	letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+	.saw-lightbox { padding: 16px; }
+	.saw-lightbox__nav { width: 40px; height: 40px; }
+	.saw-lightbox__nav--prev { left: 8px; }
+	.saw-lightbox__nav--next { right: 8px; }
+}
 
 .saw-product__thumbs { display: flex; gap: 10px; margin-top: 12px; }
 

@@ -9,7 +9,7 @@ import Seo from '@/components/Seo';
 import { CATEGORIES, matchCategory } from '@/data/catalogue';
 import { getVariantPriceAmount } from '@/components/builder/blocks/ecommerceHelpers.js';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
-import { siteName, defaultOgImage } from '@/data/siteMeta';
+import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
 const SORTS = [
 	{ value: 'relevance', label: 'Relevance' },
@@ -96,12 +96,14 @@ export default function ShopPage() {
 			<Helmet>
 				<title>Shop AC Spare Parts, Refrigerants & HVAC Materials — Supreme AC Works</title>
 				<meta name="description" content="Browse AC spare parts, refrigerant gases (R32, R410A, R134a), copper pipes, compressors, motors, insulation, electrical material, AC stands and HVAC tools at Supreme AC Works. Enquire on WhatsApp for best price." />
+				{query ? <meta name="robots" content="noindex,follow" /> : null}
 			</Helmet>
 			<Seo
 				title="Shop AC Spare Parts, Refrigerants & HVAC Materials — Supreme AC Works"
 				description="Browse AC spare parts, refrigerant gases (R32, R410A, R134a), copper pipes, compressors, motors, insulation, electrical material, AC stands and HVAC tools at Supreme AC Works."
 				siteName={siteName}
 				image={defaultOgImage}
+				url={`${siteUrl}/shop`}
 			/>
 			<SiteHeader />
 
