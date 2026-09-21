@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, Ruler } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Layers } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import {
 	getProductImage,
@@ -10,6 +10,7 @@ import {
 } from '@/components/builder/blocks/ecommerceHelpers.js';
 import { productPlaceholderImage } from '@/data/ecommerce';
 import { buildWhatsAppLink, productEnquiryMessage } from '@/lib/whatsapp';
+import { getVariantSelectLabel, getVariantCountLabel } from '@/lib/variants';
 import { matchCategory } from '@/data/catalogue';
 
 export function getProductHref(product) {
@@ -31,8 +32,9 @@ export default function ProductCard({ product }) {
 	const { addItem } = useEcommerceCart();
 	const variants = product?.variants || [];
 	const variant = variants[0];
-	// Products with more than one variant need a size/option choice — we route to
-	// the product page instead of silently adding the first variant.
+	// Products with more than one variant need an explicit option choice (size,
+	// colour, length…) — we route to the product page instead of silently adding
+	// the first variant. The option name is read from the store, never hardcoded.
 	const hasVariantChoice = variants.length > 1;
 	const price = getProductPrice(product, variant);
 	const sku = getProductSku(product, variant);
@@ -77,7 +79,7 @@ export default function ProductCard({ product }) {
 						<span className="saw-product-card__price saw-product-card__price--enquiry">Price on enquiry</span>
 					)}
 					{hasVariantChoice ? (
-						<span className="saw-product-card__variant-hint">{variants.length} sizes available</span>
+						<span className="saw-product-card__variant-hint">{getVariantCountLabel(product)}</span>
 					) : sku ? (
 						<span className="saw-product-card__sku">SKU: {sku}</span>
 					) : null}
@@ -88,9 +90,9 @@ export default function ProductCard({ product }) {
 							<Link
 								to={getProductHref(product)}
 								className="saw-btn saw-btn--red saw-btn--sm"
-								aria-label={`Select a size for ${product?.title}`}
+								aria-label={`${getVariantSelectLabel(product)} for ${product?.title}`}
 							>
-								<Ruler size={15} strokeWidth={2.4} /> Select Size
+								<Layers size={15} strokeWidth={2.4} /> {getVariantSelectLabel(product)}
 							</Link>
 						) : (
 							<button type="button" className="saw-btn saw-btn--red saw-btn--sm" onClick={handleAdd}>

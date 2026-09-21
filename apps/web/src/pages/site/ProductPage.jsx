@@ -17,6 +17,7 @@ import {
 import { productPlaceholderImage } from '@/data/ecommerce';
 import { matchCategory } from '@/data/catalogue';
 import { useProduct, useProducts } from '@/hooks/useCatalogue';
+import { getVariantOptionName } from '@/lib/variants';
 import { buildWhatsAppLink, productEnquiryMessage, bestPriceMessage } from '@/lib/whatsapp';
 import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
@@ -258,7 +259,7 @@ export default function ProductPage() {
 									{hasVariantChoice ? (
 										<div className="saw-product__variants">
 											<span className="saw-product__variants-label">
-												Option{variant?.title ? <>: <strong>{variant.title}</strong></> : null}
+												{getVariantOptionName(product)}{variant?.title ? <>: <strong>{variant.title}</strong></> : null}
 											</span>
 											<div className="saw-product__variant-chips">
 												{variants.map((v) => (

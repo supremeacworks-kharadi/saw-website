@@ -746,3 +746,855 @@
 - url: http://localhost:3000/shop
 - via: pushState
 
+## 2026-09-21 14:18:47.255Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.292Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.293Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.294Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.294Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.294Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.416Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.440Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.442Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.443Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.444Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.444Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:18:47.546Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:18:47.549Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18932:28) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks...
+
+## 2026-09-21 14:18:47.550Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:18:47.550Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18932:28) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks...
+
+## 2026-09-21 14:18:47.550Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:18:47.550Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18932:28) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks...
+
+## 2026-09-21 14:18:47.551Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:18:47.551Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18932:28) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks...
+
+## 2026-09-21 14:18:47.551Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:18:47.552Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18932:28) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks...
+
+## 2026-09-21 14:18:47.552Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:18:47.553Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18932:28) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000326154:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000326154:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks...
+
+## 2026-09-21 14:19:00.067Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.092Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.093Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.093Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.094Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.095Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.294Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.322Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.323Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.323Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.323Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.323Z window.error
+- message: Uncaught ReferenceError: Ruler is not defined
+- source: http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707
+- line: 108
+- col: 34
+- stack: 
+    ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+
+## 2026-09-21 14:19:00.431Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:19:00.432Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
+
+## 2026-09-21 14:19:00.432Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:19:00.432Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
+
+## 2026-09-21 14:19:00.433Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:19:00.433Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
+
+## 2026-09-21 14:19:00.433Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:19:00.434Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
+
+## 2026-09-21 14:19:00.434Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:19:00.434Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
+
+## 2026-09-21 14:19:00.434Z console.error
+- text: 
+    The above error occurred in the <ProductCard> component:
+    
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)
+        at div
+        at div
+        at section
+        at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1789998363523:62:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+    
+    React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+## 2026-09-21 14:19:00.434Z console.error
+- text: 
+    [ErrorBoundary] render error ReferenceError: Ruler is not defined
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:108:34)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-OGKD6Q5V.js?v=43e6b482:18734:30) {"componentStack":"\n    at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790000338707:22:3)\n    at div\n    at div\n    at section\n    at ShopPage (http://localhost:3000/src/pages/site/ShopPage.jsx?t=1790000338707:31:43)\n    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)\n    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)\n    at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)\n    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)\n    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)\n    at EcommerceCartProvider (http://localhost:3000/src/components/buil...
+
