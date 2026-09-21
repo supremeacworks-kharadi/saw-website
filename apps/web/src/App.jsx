@@ -18,6 +18,7 @@ import AboutPage from '@/pages/site/AboutPage';
 import ContactPage from '@/pages/site/ContactPage';
 import BulkEnquiryPage from '@/pages/site/BulkEnquiryPage';
 import PolicyPage from '@/pages/site/PolicyPage';
+import NotFoundPage from '@/pages/site/NotFoundPage';
 import '@/components/builder/styles/global.css';
 import '@/styles/site.css';
 
@@ -46,7 +47,7 @@ function App() {
 							<Route path="/terms-and-conditions" element={<PolicyPage policyKey="terms-and-conditions" />} />
 							<Route path="/shipping-policy" element={<PolicyPage policyKey="shipping-policy" />} />
 							<Route path="/return-refund-policy" element={<PolicyPage policyKey="return-refund-policy" />} />
-							<Route path="*" element={<ShopPage />} />
+							<Route path="*" element={<NotFoundPage />} />
 						</Routes>
 					</ErrorBoundary>
 				</Router>

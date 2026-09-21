@@ -576,6 +576,34 @@ export async function getProducts({
 }
 
 /**
+ * Fetch every product in the store, transparently paginating past the API's
+ * per-request cap. The store can hold more items than a single `limit` returns
+ * (e.g. 172 products), so callers that need the full catalogue should use this
+ * instead of a hard-coded `limit`.
+ *
+ * The first page reveals the store's total `count`; any remaining pages are
+ * fetched in parallel and bounded by that total (no magic loop caps).
+ *
+ * @param {Omit<GetProductsParams, 'limit' | 'offset'>} [params] - Extra filters (e.g. exclude_types)
+ * @returns {Promise<GetProductsResponse>} All products with the store's total count
+ */
+export async function getAllProducts(params = {}) {
+  const pageSize = 100;
+  const firstPage = await getProducts({ ...params, limit: pageSize, offset: 0 });
+  const total = firstPage.count ?? firstPage.products.length;
+  const products = [...firstPage.products];
+
+  const remainingRequests = [];
+  for (let offset = pageSize; offset < total; offset += pageSize) {
+    remainingRequests.push(getProducts({ ...params, limit: pageSize, offset }));
+  }
+  const remainingPages = await Promise.all(remainingRequests);
+  remainingPages.forEach((page) => products.push(...page.products));
+
+  return { count: total, offset: 0, limit: products.length, products };
+}
+
+/**
  * GET /store/{store_id}/products/{id} - Get Single Product Endpoint
  * @function getProduct
  * @static

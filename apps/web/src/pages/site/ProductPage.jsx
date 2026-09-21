@@ -16,55 +16,25 @@ import {
 } from '@/components/builder/blocks/ecommerceHelpers.js';
 import { productPlaceholderImage } from '@/data/ecommerce';
 import { matchCategory } from '@/data/catalogue';
+import { useProduct, useProducts } from '@/hooks/useCatalogue';
 import { buildWhatsAppLink, productEnquiryMessage, bestPriceMessage } from '@/lib/whatsapp';
 import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
 
 export default function ProductPage() {
 	const { slug } = useParams();
 	const { addItem, removeItem, isInCart } = useEcommerceCart();
-	const [product, setProduct] = useState(null);
-	const [allProducts, setAllProducts] = useState([]);
-	const [status, setStatus] = useState('loading');
+	const { product, status } = useProduct(slug);
+	const { products: allProducts } = useProducts();
 	const [quantity, setQuantity] = useState(1);
 	const [activeImage, setActiveImage] = useState(0);
 	const [selectedVariantId, setSelectedVariantId] = useState('');
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 
+	// Reset per-product view state whenever the route changes.
 	useEffect(() => {
-		let cancelled = false;
-		setStatus('loading');
-		setProduct(null);
 		setActiveImage(0);
 		setQuantity(1);
 		setSelectedVariantId('');
-		(async () => {
-			try {
-				const api = await import('@/api/EcommerceApi.js');
-				let result = null;
-				if (api.getProductBySlug) {
-					try {
-						result = await api.getProductBySlug(slug);
-					} catch (slugErr) {
-						// Slug lookup failed (e.g. the URL used a product id). Fall back to the list below.
-						result = null;
-					}
-				}
-				if (!result && api.getProducts) {
-					const list = await api.getProducts({ limit: 100, exclude_types: 'subscription' });
-					const items = (Array.isArray(list) ? list : list?.products) || [];
-					if (!cancelled) setAllProducts(items);
-					result = items.find((item) => item.slug === slug || item.id === slug) || null;
-				}
-				if (!cancelled) {
-					setProduct(result);
-					setStatus(result ? 'ready' : 'notfound');
-				}
-			} catch (err) {
-				console.warn('[ProductPage] failed to load product', err);
-				if (!cancelled) setStatus('error');
-			}
-		})();
-		return () => { cancelled = true; };
 	}, [slug]);
 
 	const variants = product?.variants || [];
@@ -182,6 +152,9 @@ export default function ProductPage() {
 			<Helmet>
 				<title>{product ? `${product.title} — Supreme AC Works` : 'Product — Supreme AC Works'}</title>
 				<meta name="description" content={product?.seo_settings?.description || `${product?.title || 'AC spare parts and HVAC materials'} at Supreme AC Works. Enquire on WhatsApp for best price and availability.`} />
+				{status === 'notfound' || status === 'error' ? (
+					<meta name="robots" content="noindex,follow" />
+				) : null}
 				{productJsonLd ? (
 					<script type="application/ld+json">{JSON.stringify(productJsonLd)}</script>
 				) : null}

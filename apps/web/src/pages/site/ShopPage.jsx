@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, MessageCircle } from 'lucide-react';
@@ -7,6 +7,7 @@ import SiteFooter from '@/components/site/SiteFooter';
 import ProductCard from '@/components/site/ProductCard';
 import Seo from '@/components/Seo';
 import { CATEGORIES, matchCategory } from '@/data/catalogue';
+import { useProducts } from '@/hooks/useCatalogue';
 import { getVariantPriceAmount } from '@/components/builder/blocks/ecommerceHelpers.js';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
 import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
@@ -23,31 +24,7 @@ export default function ShopPage() {
 	const query = searchParams.get('q') || '';
 	const activeCategory = searchParams.get('cat') || 'all';
 	const [sort, setSort] = useState('relevance');
-	const [products, setProducts] = useState([]);
-	const [isLoading, setIsLoading] = useState(true);
-	const [error, setError] = useState(null);
-
-	useEffect(() => {
-		let cancelled = false;
-		(async () => {
-			setIsLoading(true);
-			try {
-				const api = await import('@/api/EcommerceApi.js');
-				const result = await api.getProducts({ limit: 100, exclude_types: 'subscription' });
-				const list = (Array.isArray(result) ? result : result?.products) || [];
-				if (!cancelled) {
-					setProducts(list);
-					setError(null);
-				}
-			} catch (err) {
-				console.warn('[ShopPage] failed to load products', err);
-				if (!cancelled) setError(err);
-			} finally {
-				if (!cancelled) setIsLoading(false);
-			}
-		})();
-		return () => { cancelled = true; };
-	}, []);
+	const { products, isLoading, error } = useProducts();
 
 	const filtered = useMemo(() => {
 		let list = products;
