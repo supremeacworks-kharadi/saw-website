@@ -156,7 +156,7 @@ export default function ShopPage() {
 						<>
 							<p className="saw-shop-count">{filtered.length} product{filtered.length === 1 ? '' : 's'}{query ? ` for “${query}”` : ''}</p>
 							<div className="saw-product-grid">
-								{filtered.map((product) => <ProductCard key={product.id} product={product} />)}
+								{filtered.map((product, index) => <ProductCard key={product.id} product={product} priority={index < 4} />)}
 							</div>
 						</>
 					) : (

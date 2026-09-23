@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import QuantityPicker from './QuantityPicker.jsx';
 import { productPlaceholderImage } from '@/data/ecommerce';
+import { cdnImage } from '@/lib/images';
 
 const EcommerceCartContext = createContext(null);
 const STORAGE_KEY = 'shopping-cart-items';
@@ -279,7 +280,7 @@ export default function EcommerceCart({
 							<li key={key} className="ecommerce-cart__item">
 								<div className="ecommerce-cart__item-main">
 									{thumbnail ? (
-										<img src={thumbnail} alt="" className="ecommerce-cart__thumb" />
+										<img src={cdnImage(thumbnail, 120)} alt="" className="ecommerce-cart__thumb" loading="lazy" decoding="async" />
 									) : null}
 									<div>
 										<div>{item.title || item.name || 'Item'}</div>

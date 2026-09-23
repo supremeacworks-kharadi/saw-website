@@ -4,8 +4,28 @@ import { useEffect, useState } from 'react';
 // centralised here rather than repeated at every call site.
 const CATALOGUE_PARAMS = { exclude_types: 'subscription' };
 
+// The full catalogue is identical for every page, so fetch it once and share the
+// in-flight/resolved promise across all consumers for the rest of the session.
+// This stops each navigation (and every product page, which needs related items)
+// from re-downloading all products. A failed load clears the cache so the next
+// consumer retries instead of caching the error.
+let cataloguePromise = null;
+
+function loadCatalogue() {
+	if (!cataloguePromise) {
+		cataloguePromise = import('@/api/EcommerceApi.js')
+			.then((api) => api.getAllProducts(CATALOGUE_PARAMS))
+			.then((result) => result.products)
+			.catch((err) => {
+				cataloguePromise = null;
+				throw err;
+			});
+	}
+	return cataloguePromise;
+}
+
 /**
- * Loads the full product catalogue (all paginated pages) once per mount.
+ * Loads the full product catalogue (all paginated pages) once per session.
  * Centralises the dynamic import, loading/error state and effect cleanup that
  * would otherwise be copy-pasted into every catalogue page.
  *
@@ -19,21 +39,19 @@ export function useProducts() {
 	useEffect(() => {
 		let cancelled = false;
 		setIsLoading(true);
-		(async () => {
-			try {
-				const api = await import('@/api/EcommerceApi.js');
-				const { products: list } = await api.getAllProducts(CATALOGUE_PARAMS);
-				if (!cancelled) {
-					setProducts(list);
-					setError(null);
-				}
-			} catch (err) {
+		loadCatalogue()
+			.then((list) => {
+				if (cancelled) return;
+				setProducts(list);
+				setError(null);
+			})
+			.catch((err) => {
 				console.warn('[useProducts] failed to load products', err);
 				if (!cancelled) setError(err);
-			} finally {
+			})
+			.finally(() => {
 				if (!cancelled) setIsLoading(false);
-			}
-		})();
+			});
 		return () => { cancelled = true; };
 	}, []);
 
@@ -62,11 +80,12 @@ export function useProduct(slug) {
 				try {
 					result = await api.getProductBySlug(slug);
 				} catch {
-					// Slug lookup failed (e.g. the URL used a product id) — fall back to the list.
+					// Slug lookup failed (e.g. the URL used a product id) — fall back to the
+					// cached catalogue instead of a fresh full fetch.
 					result = null;
 				}
 				if (!result) {
-					const { products } = await api.getAllProducts(CATALOGUE_PARAMS);
+					const products = await loadCatalogue();
 					result = products.find((item) => item.slug === slug || item.id === slug) || null;
 				}
 				if (!cancelled) {
@@ -83,5 +102,6 @@ export function useProduct(slug) {
 
 	return { product, status };
 }
+
 
 

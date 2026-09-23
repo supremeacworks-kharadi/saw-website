@@ -18,8 +18,14 @@ import { productPlaceholderImage } from '@/data/ecommerce';
 import { matchCategory } from '@/data/catalogue';
 import { useProduct, useProducts } from '@/hooks/useCatalogue';
 import { getVariantOptionName } from '@/lib/variants';
+import { cdnImage, cdnImageSrcSet } from '@/lib/images';
 import { buildWhatsAppLink, productEnquiryMessage, bestPriceMessage } from '@/lib/whatsapp';
 import { siteName, siteUrl, defaultOgImage } from '@/data/siteMeta';
+
+// Display widths (CSS px) per image slot; larger options cover 2x screens.
+const MAIN_IMAGE_WIDTHS = [400, 600, 800, 1000];
+const THUMB_IMAGE_WIDTH = 150;
+const LIGHTBOX_IMAGE_WIDTH = 1600;
 
 export default function ProductPage() {
 	const { slug } = useParams();
@@ -223,7 +229,14 @@ export default function ProductPage() {
 										onClick={() => setLightboxOpen(true)}
 										aria-label="Enlarge image"
 									>
-										<img src={images[activeImage] || images[0]} alt={product.title} />
+										<img
+											src={cdnImage(images[activeImage] || images[0], 800)}
+											srcSet={cdnImageSrcSet(images[activeImage] || images[0], MAIN_IMAGE_WIDTHS)}
+											sizes="(max-width: 900px) 90vw, 520px"
+											alt={product.title}
+											fetchPriority="high"
+											decoding="async"
+										/>
 										<span className="saw-product__zoom-hint"><ZoomIn size={16} strokeWidth={2.4} /></span>
 									</button>
 									{images.length > 1 ? (
@@ -236,7 +249,7 @@ export default function ProductPage() {
 													onClick={() => setActiveImage(index)}
 													aria-label={`View image ${index + 1}`}
 												>
-													<img src={url} alt="" />
+													<img src={cdnImage(url, THUMB_IMAGE_WIDTH)} alt="" loading="lazy" decoding="async" />
 												</button>
 											))}
 										</div>
@@ -394,7 +407,7 @@ export default function ProductPage() {
 					) : null}
 					<img
 						className="saw-lightbox__image"
-						src={images[activeImage] || images[0]}
+						src={cdnImage(images[activeImage] || images[0], LIGHTBOX_IMAGE_WIDTH)}
 						alt={product.title}
 						onClick={(e) => e.stopPropagation()}
 					/>

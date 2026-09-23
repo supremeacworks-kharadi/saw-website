@@ -11,7 +11,11 @@ import {
 import { productPlaceholderImage } from '@/data/ecommerce';
 import { buildWhatsAppLink, productEnquiryMessage } from '@/lib/whatsapp';
 import { getVariantSelectLabel, getVariantCountLabel } from '@/lib/variants';
+import { cdnImage, cdnImageSrcSet } from '@/lib/images';
 import { matchCategory } from '@/data/catalogue';
+
+// Card image display widths (CSS px); doubled options cover 2x displays.
+const CARD_IMAGE_WIDTHS = [200, 300, 400, 600];
 
 export function getProductHref(product) {
 	return `/product/${product?.slug || product?.id}`;
@@ -28,7 +32,7 @@ export function getProductPrice(product, variant) {
 		|| '';
 }
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, priority = false }) {
 	const { addItem } = useEcommerceCart();
 	const variants = product?.variants || [];
 	const variant = variants[0];
@@ -61,7 +65,15 @@ export default function ProductCard({ product }) {
 	return (
 		<article className="saw-product-card">
 			<Link to={getProductHref(product)} className="saw-product-card__media">
-				<img src={image} alt={product?.title || 'Product'} loading="lazy" />
+				<img
+					src={cdnImage(image, 400)}
+					srcSet={cdnImageSrcSet(image, CARD_IMAGE_WIDTHS)}
+					sizes="(max-width: 600px) 45vw, 280px"
+					alt={product?.title || 'Product'}
+					loading={priority ? 'eager' : 'lazy'}
+					fetchPriority={priority ? 'high' : 'auto'}
+					decoding="async"
+				/>
 			</Link>
 			<div className="saw-product-card__body">
 				{category ? (

@@ -134,7 +134,7 @@ export default function CategoryPage() {
 						</div>
 					) : visibleProducts.length ? (
 						<div className="saw-product-grid">
-							{visibleProducts.map((product) => <ProductCard key={product.id} product={product} />)}
+							{visibleProducts.map((product, index) => <ProductCard key={product.id} product={product} priority={index < 4} />)}
 						</div>
 					) : (
 						<div className="saw-empty">

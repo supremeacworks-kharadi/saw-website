@@ -2,1153 +2,1765 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://supremeacworks.com/</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/shop</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/categories</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/about</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/contact</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/bulk-enquiry</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/privacy-policy</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/terms-and-conditions</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/shipping-policy</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/return-refund-policy</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/refrigerant-gases</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/copper-pipes-coils</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/ac-compressors</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/ac-motors</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/insulation</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/electrical-materials</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/ac-stands</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/pcb-electronics</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/installation-material</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/category/tools-accessories</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
+		<loc>https://supremeacworks.com/product/refrigerant-charging-hose-set</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/value-hvac-manifold-valve</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/refrigerant-charging-valve-with-hook</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/blue-pvc-water-pipe</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/high-pressure-washer-spray-gun</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/magnetic-contactor</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/cjx2-1810-ac-contactor</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/magnetic-contactor-clx-25lf2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/ct-807-eccentric-cone-type-flaring-tool-set</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/flaring-tools-for-expanding-tube-set</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/digital-vacuum-gauge-kit</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/multi-color-pvc-hose-pipe-set</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/cleanac-ac-foam-cleaner-and-disinfectant</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/slotted-countersunk-head-screw</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/raxon-2-pole-20a-contactor-220v</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/pu-foam-insulation-sealant</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/reftron-r32-refrigerant-gas-canister</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/yzf5-135w-electric-fan-motor</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/electric-fan-motor-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/ac-fan-motor-83a-230sac-10</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/electric-fan-motor-230v-5060hz</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/electric-fan-motor-yzf2516</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/electric-fan-motor-yzf40-25</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/electric-fan-motor</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/yzf20-10-electric-fan-motor</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/electric-fan-motor-230v</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/videocon-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control4</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/voltas-ac-remote-control2-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control4-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/voltas-ac-remote-control2-2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/samsung-ac-remote-control-b8f9</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/air-conditioner-remote-control2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/voltas-ac-remote-control2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/cruise-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/midea-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/lloyd-ac-remote-control-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/lloyd-ac-remote-control-2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/lg-air-conditioner-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/air-conditioner-remote-control1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-air-conditioner-remote</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/hitachi-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/lloyd-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/remote-control-for-lg-air-conditioner</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/bluestar-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/carrier-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control3-3</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control3-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control3</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/daikin-arc484a1-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control3-2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/blue-star-ac-remote-control2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/blue-star-ac-remote-control1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control2-3</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control2-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control2-4</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/voltas-ac-remote-control1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/air-conditioner-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control2-2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-for-haier</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/general-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/o-general-ac-remote-control-no107b</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control1-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/voltas-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/samsung-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-for-tcl</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/o-general-ac-remote-control1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-remote-for-samsung-ac</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/blue-star-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/o-general-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/air-purifier-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-air-conditioner-remote-control-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control-2</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/azone-universal-ac-remote-azone-202</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-1000-in-1</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-ac-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/universal-air-conditioner-remote-control</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/stallion-r404-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/hfc-32-refrigerant-cylinder-stallion</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/r-407-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/r-410a-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/mpcl-r32-refrigerant-gas-cylinders</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/floron-r-32-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/floron-134a-refrigerant-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/floron-r-410a-refrigerant-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/mpcl-r-404a-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/floron-f-407c-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/floron-r-404a-refrigerant-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/mpcl-r-410a-refrigerant-gas-cylinder</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/tclgodrej-ac-remote-control-no17</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/carrier-ac-remote-control-no82</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-mp35cf-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-mp242-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-mp28aa-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-mp24ab-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-30byj46-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-28byj48-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-24byj48-y05-</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://supremeacworks.com/product/swing-motor-mode-24byj48</loc>
+		<lastmod>2026-09-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://supremeacworks.com/product/whirlpool-ac-remote-control-no4a</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/voltas-air-conditioner-remote-control-no14</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/voltas-ac-remote-control-no7b</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/voltas-ac-remote-control-no03</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/voltas-ac-remote-control-no02</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/videocon-ac-remote-control-no07</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/totaline-ac-remote-control-no12b</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/samsung-ac-remote-control-no6</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/samsung-ac-remote-control-samsung-no05</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/samsung-5way-ac-remote-control-no11</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/onida-ac-remote-control-no07c</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/o-general-ac-remote-control-no08</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/mitsubishi-ac-remote-control-no14a</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/lg-timer-ac-remote-control-no10</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/lg-door-ac-remote-control-no09</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/electorelaxvideocon-9button-ac-remote-control-no13</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/carrier-ac-remote-control-no7a</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/bluestarvoltas-ac-remote-control-no12</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/blue-star-ac-remote-control-no12a</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/digital-process-controller-7596t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/sub-zero-digital-process-controller-7562t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/subzero-digital-process-controller-7558t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/sub-zero-digital-process-controller-7552t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/sub-zero-digital-process-controller-7529t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/sub-zero-sz-7520-p-digital-process-controller</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/digital-process-controller-7524t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/sub-zero-digital-process-controller-7510p-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/sub-zero-digital-process-controller-7510t-re0</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/refromax-r22-refrigerant-gas-cylinder</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/s1-mini-condensate-pump</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/value-s2-mini-condensate-pump</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/vmc-1-clamp-meter</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/aspen-max-hi-flow-condensate-pump</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/pvc-bellows-pipe-connector</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/insulated-ac-drain-hose</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/mini-aqua-condensate-removal-pump</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/ecocare-ac-coil-shiner-1000ml</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/uniweld-handi-torch-kit</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/aipl-sunsui-nitrile-foam-tape</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/jois-suns-butane-gas-canister</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/pvc-pipe-wrapping-tape-adhesive</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/aspen-mini-blanc-drain-pump</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/cyclone-gas-torch-butane-100percent-copper</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/double-head-brass-torch-burner</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/mapp-pro-gas-torch-cylinder</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/gas-blow-torch</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/butane-gas-cartridge-220g</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/high-pressure-washer-accessories-set</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/whdz-digital-clamp-meter-mt87</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/supremoflex-15-sq-mm-4-core-cable</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/supremoflex-15-sq-mm-3-core-cable</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/refromax-r32-refrigerant-gas-cylinder</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/stallion-hydrocarbon-gas-canister</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/r-134a-refrigerant-can-450g</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/freon-134a-automotive-refrigerant</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/refex-hfc-134a-refrigerant-can</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/mpcl-r-600a-high-purity-refrigerant-200g</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/floron-134a-refrigerant-can</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/ecolane-r-134a-refrigerant-450g</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/kiro-r290-propane-refrigerant-150g</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/fluoro-r-134a-refrigerant-can</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/copper-pipe-soft-58-inch-or-50-feets</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/copper-pipe-soft-34-inch-or-50-feets</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/copper-pipe-soft-38-inch-or-50-feets</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/copper-pipe-soft-12-inch-or-50-feets</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/copper-coil-pipe</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/k-flex-class-1-nitrile-foam-tubes-19mm</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/k-flex-class-1-nitrile-foam-tubes-13mm</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/k-flex-class-1-nitrile-foam-tubes-09mm</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/k-flex-class-1-nitrile-foam-tubes-06mm</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-yys-25-42-saw-m2o</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-yyk-13-4-13wt-saw-m52</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-ydk27-4a6-saw-m12</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-ydk-16-4-small-saw-m35</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-voltas-dc-long-saw-m56</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-voltas-dc-18wt-saw-m62</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-voltas-57w-saw-m46</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-voltas-dc-sml-saw-m81</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-universalwhirlpool-dc-saw-m72</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-ss-idu-dc-small-saw-m27</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-ss-idu-ac-28w-saw-m50</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-samsung-dc-mini-saw-m13</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-samsung-dc-long-saw-m71</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rps35b-saw-m08-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rps-27c-saw-m29</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rps-20-1-saw-m80</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg35v-saw-m31</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg35d-saw-m30</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg-26-saw-m82</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg-25-saw-m76-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg20d-saw-m68</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg-45c-saw-m17-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg-45-33-saw-m06-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg-29a-saw-m61-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rpg-28d-saw-m79-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rp15-inv-saw-m66</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-rp-15q-saw-m33-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-g35a-whirlpool-saw-m42</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-panasonic-odu-dc-saw-m18</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-panasonic-dc-saw-m51</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-panasonic-ac-saw-m21</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-og-dc-49wt-saw-m67-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-mit-dc-odu-49-wt-saw-m22</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-mit-56-sml-saw-m44</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-mit-56-long-saw-m45</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-mit-16wt-saw-m69</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lloyd-y4s4-25wt-saw-m28</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-dc-log-saw-m83</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-odu-dc-5wire-saw-m54</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-odu-dc-3wire-saw-m24</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-dc-sml-saw-m59</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-60wt-dc-saw-m48</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-15-rp-35b-saw-m47</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-lg-1-ton-rp15-saw-m77</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-hitachi-dc-18w-small-saw-m43</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-hitachi-3wire-odu-dc-saw-m53</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-hitachi-odu-dc-47wt-saw-m19</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-hitachi-dc-30wt-saw-m78</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-hitachi-18wt-ac-saw-m25-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-haier-dc-saw-m10</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-haier-ac-20wt-saw-m84-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-gal-30wt-saw-m70</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/-air-conditioner-odu-dc-motor-gal-20wt-saw-m63</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-fn25v-pg-saw-m64</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-fn20j-pg-saw-m26</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-fn20-vpg-saw-m85</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-fn-35-saw-m55</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-odu-dc-saw-m02</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-odu-dc-3wire-saw-m49</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-dc-6wire-saw-m36</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-ac-odu-38wt-saw-m38</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-ac-30wt-saw-m41</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-ac-18wt-saw-m74</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-daikin-ac-13w-saw-m60</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-carrier-65w-saw-m01</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/air-conditioner-odu-dc-motor-bluestar-saw-m65</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uh-1169-blue-star</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uh-1158-carrier</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uh-1110uh-1170-blue-star</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uh-1101uh-1179h-11017-blue-star</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uc-1195-invertor-model-3wire</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uc-1187m-daikin-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uc-1154mr-invertor-model-5wire</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uc-1154m-inverter-model-5-wire-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-pht-1188uh1288uh12029-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-pht-1184uh-1284-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-pht-1156uh-1056-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/piclh-11007uh-11103-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-e-12079e-1198-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-e-1154-blue-star</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-e-1152-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-e-1137-carrier-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-e-1134-blue-star</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-electric-fan-motor</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-blrb-1101111009-universal-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-blrb-1001210008-universal-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/picl-uc-11007-1-panasonic-</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-voltas-2203</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-videocon-2209</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-hitachi-uh-1109</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-hitachi-2207</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-ductable-indoor-motor-uh-1174</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-carrier-2202</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-carrier-uh-1284</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-blue-star-uh-1169</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-blue-star-uh-1056</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-blue-star-2212</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-blue-star-2206</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-blue-star-2205</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-blue-star-uh-1110</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-azurevoltas-2204</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://supremeacworks.com/product/benz-motor-hitachi-uh-1171</loc>
-		<lastmod>2026-09-21</lastmod>
+		<lastmod>2026-09-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
