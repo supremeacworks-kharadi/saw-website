@@ -62,6 +62,16 @@ const server = createServer((request, response) => {
 		return;
 	}
 
+	// Serve prerendered per-route SEO HTML when it exists (mirrors the Hostinger
+	// .htaccess rule): /shop -> shop.html, /product/foo -> product/foo.html.
+	if (safePath !== '/') {
+		const prerenderedPath = path.join(distDir, `${safePath.replace(/\/$/, '')}.html`);
+		if (fs.existsSync(prerenderedPath) && fs.statSync(prerenderedPath).isFile()) {
+			sendFile(response, prerenderedPath);
+			return;
+		}
+	}
+
 	// SPA deep-link fallback: /contact, /about, etc.
 	sendFile(response, path.join(distDir, 'index.html'));
 });

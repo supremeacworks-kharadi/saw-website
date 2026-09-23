@@ -1,11 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
+import { siteUrl } from '@/data/siteMeta';
 
 // Social + canonical tags only. The page's own <Helmet> must keep a literal
 // <title> and <meta name="description">, because the llms.txt build step reads
 // those two tags straight out of the page file's source.
 const Seo = ({ title, description, image, url, siteName, type = 'website' }) => {
-    const canonical = url || window.location.origin + window.location.pathname;
+    // Derive the canonical from the router path (works during SSR/prerender too,
+    // unlike window.location) and pin it to the non-www host so it matches the
+    // sitemap and the prerendered <link rel="canonical"> tags.
+    const { pathname } = useLocation();
+    const canonical = url || `${siteUrl}${pathname}`;
 
     return (
         <Helmet>

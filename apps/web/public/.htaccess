@@ -11,6 +11,12 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
+  # Serve the prerendered per-route SEO HTML when it exists
+  # (e.g. /shop -> shop.html, /product/foo -> product/foo.html). These files
+  # carry baked <title>/meta/canonical/JSON-LD; the SPA still hydrates normally.
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
   # Otherwise, hand the route to the SPA entry point
   RewriteRule ^ index.html [L]
 </IfModule>
