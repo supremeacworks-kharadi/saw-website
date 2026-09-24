@@ -124,7 +124,7 @@ export default function HomePage() {
 						</div>
 					</div>
 					<div className="saw-hero__media">
-						<img src={IMAGES.hero} alt="AC spare parts, copper coils, refrigerant cylinder and HVAC tools" />
+						<img src={IMAGES.hero} alt="AC spare parts, copper coils, refrigerant cylinder and HVAC tools" fetchPriority="high" decoding="async" width="783" height="520" />
 					</div>
 				</div>
 				<div className="saw-hero__strip">

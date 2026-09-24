@@ -2,7 +2,8 @@
   TEMPLATE STYLES: These styles are used as a base template.
   AI is allowed to modify these styles as needed.
 */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap');
+/* Google Fonts are loaded from index.html (async, non-render-blocking) instead
+   of an @import here, which used to chain: CSS download -> parse -> font fetch. */
 
 @tailwind base;
 @tailwind components;

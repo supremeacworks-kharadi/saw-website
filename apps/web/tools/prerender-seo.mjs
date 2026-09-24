@@ -20,7 +20,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CATEGORIES } from '../src/data/catalogue.js';
+import { CATEGORIES, IMAGES } from '../src/data/catalogue.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -126,7 +126,7 @@ function toMetaDescription(html, fallback) {
  * Rewrite the built index.html for one route: swap the head SEO tags, add a
  * canonical link, optional JSON-LD, and a <noscript> content fallback.
  */
-function renderRouteHtml(template, { canonical, title, description, image, type = 'website', jsonLd, noscript }) {
+function renderRouteHtml(template, { canonical, title, description, image, type = 'website', jsonLd, noscript, preloadImage }) {
 	let html = template;
 	const safeTitle = escapeHtml(title);
 	const safeDesc = escapeHtml(description);
@@ -157,6 +157,13 @@ function renderRouteHtml(template, { canonical, title, description, image, type 
 
 	// Inject a canonical link (none in the template) right before </head>.
 	const headInjections = [`\t\t<link rel="canonical" href="${escapeHtml(canonical)}" />`];
+	// Preload the page's LCP image so the browser discovers it from the HTML
+	// immediately, instead of waiting for the JS bundle to render it.
+	if (preloadImage) {
+		headInjections.push(
+			`\t\t<link rel="preload" as="image" href="${escapeHtml(preloadImage)}" fetchpriority="high" />`,
+		);
+	}
 	if (jsonLd) {
 		headInjections.push(
 			`\t\t<script type="application/ld+json">\n${JSON.stringify(jsonLd)}\n\t\t</script>`,
@@ -202,6 +209,8 @@ async function main() {
 			title: meta.title,
 			description: meta.description,
 			image: DEFAULT_OG_IMAGE,
+			// The home hero is the LCP element — preload it so it paints fast.
+			preloadImage: routePath === '/' ? IMAGES.hero : undefined,
 			noscript: `\t\t\t<h1>${escapeHtml(meta.title)}</h1>\n\t\t\t<p>${escapeHtml(meta.description)}</p>`,
 		});
 		writeRouteFile(routePath, html);
@@ -260,6 +269,8 @@ async function main() {
 				image,
 				type: 'product',
 				jsonLd,
+				// The product photo is the LCP element on a product page.
+				preloadImage: image,
 				noscript: `\t\t\t<h1>${escapeHtml(name)}</h1>\n\t\t\t<p>${escapeHtml(description)}</p>\n${noscriptImg}`,
 			});
 			writeRouteFile(routePath, html);
@@ -278,5 +289,10 @@ main().catch((err) => {
 	// Non-fatal: the SPA still works without baked meta.
 	process.exit(0);
 });
+
+
+
+
+
 
 

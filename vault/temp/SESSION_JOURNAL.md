@@ -2824,3 +2824,35 @@ Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6
         at Module.getAllProducts (http://localhost:3000/src/api/EcommerceApi.js:592:27)
         at http://localhost:3000/src/hooks/useCatalogue.js?t=1790172676446:17:23
 
+## 2026-09-24 06:52:31.636Z load
+- url: http://localhost:3000/
+- title: Supreme AC Works — AC Spare Parts, Refrigerants & HVAC Materials
+
+## 2026-09-24 06:52:31.658Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-24 06:52:33.579Z console.error
+- text: 
+    Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s fetchPriority fetchpriority 
+        at img
+        at a
+        at LinkWithRef (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10927:5)
+        at article
+        at ProductCard (http://localhost:3000/src/components/site/ProductCard.jsx?t=1790231297942:24:3)
+        at div
+        at FeaturedProducts (http://localhost:3000/src/pages/builder/home/HomePage.jsx?t=1790231297942:44:35)
+        at div
+        at section
+        at HomePage (http://localhost:3000/src/pages/builder/home/HomePage.jsx?t=1790231297942:101:20)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7572:3)
+        at Suspense
+        at ErrorBoundary (http://localhost:3000/src/components/ErrorBoundary.jsx:5:5)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=43e6b482:10816:3)
+        at EcommerceCartProvider (http://localhost:3000/src/components/builder/blocks/EcommerceCart.jsx?t=1790231297942:63:3)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-47K53FJV.js?v=43e6b482:22:15)
+        at TooltipProvider (http://localhost:3000/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=43e6b482:67:5)
+        at App
+
