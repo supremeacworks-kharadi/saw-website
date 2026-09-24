@@ -588,7 +588,7 @@ export async function getProducts({
  * @returns {Promise<GetProductsResponse>} All products with the store's total count
  */
 export async function getAllProducts(params = {}) {
-  const pageSize = 100;
+  const pageSize = 500;
   const firstPage = await getProducts({ ...params, limit: pageSize, offset: 0 });
   const total = firstPage.count ?? firstPage.products.length;
   const products = [...firstPage.products];

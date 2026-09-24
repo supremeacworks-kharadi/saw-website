@@ -149,6 +149,9 @@
 					}, 450);
 				}
 
+				// Let the React app dismiss the splash the instant it paints.
+				window.__sawDismissSplash = dismiss;
+
 				// Whichever comes first: app/window ready, or a hard 900ms cap.
 				if (document.readyState === 'complete') {
 					dismiss();
