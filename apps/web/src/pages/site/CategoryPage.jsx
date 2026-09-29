@@ -97,7 +97,7 @@ export default function CategoryPage() {
 						) : null}
 					</div>
 					<div className="saw-split__media saw-split__media--small">
-						<img src={category.image} alt={category.name} />
+						<img src={category.image} alt={category.name} loading="lazy" decoding="async" />
 					</div>
 				</div>
 			</section>

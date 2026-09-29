@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, ShoppingCart, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, ShoppingCart, MessageCircle, ChevronDown, ArrowRight } from 'lucide-react';
 import { useEcommerceCart } from '@/components/builder/blocks/EcommerceCart.jsx';
 import { buildWhatsAppLink, GENERIC_ENQUIRY_MESSAGE } from '@/lib/whatsapp';
+import { CATEGORIES } from '@/data/catalogue';
 
 export const NAV_LINKS = [
 	{ to: '/', label: 'Home' },
-	{ to: '/shop', label: 'Shop' },
 	{ to: '/categories', label: 'Categories' },
-	{ to: '/category/refrigerant-gases', label: 'Refrigerants' },
-	{ to: '/category/copper-pipes-coils', label: 'Copper & Installation' },
-	{ to: '/category/ac-compressors', label: 'AC Spares' },
 	{ to: '/bulk-enquiry', label: 'Bulk Enquiry' },
 	{ to: '/about', label: 'About Us' },
 	{ to: '/contact', label: 'Contact' },
@@ -19,9 +16,25 @@ export const NAV_LINKS = [
 export default function SiteHeader() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
+	const [isCatMenuOpen, setIsCatMenuOpen] = useState(false);
 	const [query, setQuery] = useState('');
 	const navigate = useNavigate();
 	const { toggleCart, itemCount } = useEcommerceCart();
+	const catCloseTimer = useRef(null);
+
+	const openCatMenu = () => {
+		clearTimeout(catCloseTimer.current);
+		setIsCatMenuOpen(true);
+	};
+	// Small delay so moving the pointer from the tab into the panel doesn't flicker.
+	const scheduleCloseCatMenu = () => {
+		clearTimeout(catCloseTimer.current);
+		catCloseTimer.current = setTimeout(() => setIsCatMenuOpen(false), 140);
+	};
+	const closeCatMenu = () => {
+		clearTimeout(catCloseTimer.current);
+		setIsCatMenuOpen(false);
+	};
 
 	const submitSearch = (event) => {
 		event.preventDefault();
@@ -56,16 +69,38 @@ export default function SiteHeader() {
 				</Link>
 
 				<nav className="saw-nav" aria-label="Main navigation">
-					{NAV_LINKS.map((link) => (
-						<NavLink
-							key={link.to}
-							to={link.to}
-							end={link.to === '/'}
-							className={({ isActive }) => (isActive ? 'is-active' : '')}
-						>
-							{link.label}
-						</NavLink>
-					))}
+					{NAV_LINKS.map((link) => {
+						if (link.to === '/categories') {
+							return (
+								<span
+									key={link.to}
+									className="saw-nav__cat"
+									onMouseEnter={openCatMenu}
+									onMouseLeave={scheduleCloseCatMenu}
+								>
+									<NavLink
+										to={link.to}
+										className={({ isActive }) => (isActive ? 'is-active' : '')}
+										onFocus={openCatMenu}
+										aria-expanded={isCatMenuOpen}
+									>
+										{link.label}
+										<ChevronDown size={15} strokeWidth={2.4} className="saw-nav__caret" aria-hidden="true" />
+									</NavLink>
+								</span>
+							);
+						}
+						return (
+							<NavLink
+								key={link.to}
+								to={link.to}
+								end={link.to === '/'}
+								className={({ isActive }) => (isActive ? 'is-active' : '')}
+							>
+								{link.label}
+							</NavLink>
+						);
+					})}
 				</nav>
 
 				<div className="saw-header__actions">
@@ -105,6 +140,46 @@ export default function SiteHeader() {
 					</button>
 				</div>
 			</div>
+
+			{isCatMenuOpen ? (
+				<div
+					className="saw-header__mega"
+					onMouseEnter={openCatMenu}
+					onMouseLeave={scheduleCloseCatMenu}
+				>
+					<div className="saw-container saw-mega">
+						<div className="saw-mega__grid">
+							{CATEGORIES.map((category) => (
+								<div key={category.slug} className="saw-mega__col">
+									<Link
+										to={`/category/${category.slug}`}
+										className="saw-mega__title"
+										onClick={closeCatMenu}
+									>
+										{category.name}
+									</Link>
+									{category.subcategories?.length ? (
+										<ul className="saw-mega__subs">
+											{category.subcategories.slice(0, 5).map((sub) => (
+												<li key={sub.slug}>
+													<Link to={`/category/${category.slug}?sub=${sub.slug}`} onClick={closeCatMenu}>
+														{sub.name}
+													</Link>
+												</li>
+											))}
+										</ul>
+									) : null}
+								</div>
+							))}
+						</div>
+						<div className="saw-mega__foot">
+							<Link to="/categories" className="saw-link-arrow" onClick={closeCatMenu}>
+								View all categories <ArrowRight size={15} strokeWidth={2.4} />
+							</Link>
+						</div>
+					</div>
+				</div>
+			) : null}
 
 			{isSearchOpen ? (
 				<div className="saw-header__search">

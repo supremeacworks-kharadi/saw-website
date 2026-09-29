@@ -45,13 +45,9 @@ body {
 
 .saw-container {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1600px;
 	margin: 0 auto;
-	padding: 0 16px;
-}
-
-@media (min-width: 768px) {
-	.saw-container { padding: 0 24px; }
+	padding: 0 clamp(16px, 4vw, 48px);
 }
 
 /* ── Typography helpers ── */
@@ -239,6 +235,7 @@ h1, h2, h3, .saw-logo__text strong {
 }
 
 .saw-nav a {
+	position: relative;
 	font-size: 13.5px;
 	font-weight: 600;
 	letter-spacing: 0.03em;
@@ -246,10 +243,95 @@ h1, h2, h3, .saw-logo__text strong {
 	color: var(--saw-ink);
 	text-decoration: none;
 	padding: 6px 0;
-	border-bottom: 2px solid transparent;
+	transition: color 0.18s ease, transform 0.18s ease;
 }
 
-.saw-nav a:hover, .saw-nav a.is-active { color: var(--saw-red); border-bottom-color: var(--saw-red); }
+/* Animated underline — grows from the left on hover, stays full when active. */
+.saw-nav a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	background: var(--saw-red);
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 0.22s ease;
+}
+
+.saw-nav a:hover, .saw-nav a:focus-visible { color: var(--saw-red); transform: translateY(-1px); }
+.saw-nav a:hover::after, .saw-nav a:focus-visible::after, .saw-nav a.is-active::after { transform: scaleX(1); }
+.saw-nav a.is-active { color: var(--saw-red); }
+
+@media (prefers-reduced-motion: reduce) {
+	.saw-nav a, .saw-nav a::after { transition: none; }
+	.saw-nav a:hover { transform: none; }
+}
+
+/* ── Categories hover mega-menu ── */
+.saw-nav__cat { display: inline-flex; align-items: center; }
+.saw-nav__cat > a { display: inline-flex; align-items: center; gap: 3px; }
+.saw-nav__caret { transition: transform 0.16s ease; }
+.saw-nav__cat:hover .saw-nav__caret { transform: rotate(180deg); }
+
+.saw-header__mega {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: #ffffff;
+	border-top: 1px solid var(--saw-line);
+	border-bottom: 1px solid var(--saw-line);
+	box-shadow: 0 20px 34px rgba(15, 23, 42, 0.12);
+	animation: saw-mega-in 0.14s ease;
+}
+
+@keyframes saw-mega-in {
+	from { opacity: 0; transform: translateY(-6px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.saw-mega { padding: 22px 0 20px; }
+
+.saw-mega__grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 18px 24px;
+}
+
+.saw-mega__title {
+	display: block;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--saw-ink);
+	text-decoration: none;
+	margin-bottom: 8px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid var(--saw-line);
+}
+.saw-mega__title:hover { color: var(--saw-red); border-bottom-color: var(--saw-red); }
+
+.saw-mega__subs { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+.saw-mega__subs a {
+	display: block;
+	font-size: 12.5px;
+	line-height: 1.35;
+	color: var(--saw-muted);
+	text-decoration: none;
+	padding: 3px 0;
+}
+.saw-mega__subs a:hover { color: var(--saw-red); }
+
+.saw-mega__foot {
+	margin-top: 18px;
+	padding-top: 14px;
+	border-top: 1px solid var(--saw-line);
+}
+
+@media (max-width: 1180px) { .saw-mega__grid { grid-template-columns: repeat(4, 1fr); } }
 
 .saw-header__actions {
 	display: flex;
@@ -520,13 +602,10 @@ h1, h2, h3, .saw-logo__text strong {
 }
 
 .saw-cat-card {
-	display: flex;
-	flex-direction: column;
+	position: relative;
 	background: #ffffff;
 	border: 1px solid var(--saw-line);
 	border-radius: var(--saw-radius);
-	overflow: hidden;
-	text-decoration: none;
 	transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
 }
 
@@ -534,6 +613,17 @@ h1, h2, h3, .saw-logo__text strong {
 	border-color: var(--saw-red);
 	box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
 	transform: translateY(-2px);
+	z-index: 20; /* keep the hovered card + its flyout above neighbours */
+}
+
+.saw-cat-card__main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden; /* clip image to the rounded corners */
+	border-radius: var(--saw-radius);
+	text-decoration: none;
+	color: inherit;
 }
 
 .saw-cat-card__media { aspect-ratio: 3 / 2; overflow: hidden; background: #eef1f4; }
@@ -558,8 +648,100 @@ h1, h2, h3, .saw-logo__text strong {
 	color: var(--saw-red);
 }
 
+/* ── Hover flyout: subcategories on image cards (pointer devices only) ── */
+.saw-cat-card__flyout {
+	display: none; /* enabled under @media (hover: hover) below */
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	right: -1px;
+	z-index: 30;
+	padding: 12px 14px 14px;
+	background: #ffffff;
+	border: 1px solid var(--saw-red);
+	border-top: none;
+	border-radius: 0 0 var(--saw-radius) var(--saw-radius);
+	box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+	transform-origin: top center;
+}
+
+.saw-cat-card__subs {
+	list-style: none;
+	margin: 0 0 8px;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: 2px 12px;
+}
+
+.saw-cat-card__subs a {
+	display: block;
+	padding: 5px 6px;
+	font-size: 12.5px;
+	line-height: 1.3;
+	color: var(--saw-muted);
+	text-decoration: none;
+	border-radius: 6px;
+	transition: color 0.14s ease, background 0.14s ease;
+}
+
+.saw-cat-card__subs a:hover {
+	color: var(--saw-red);
+	background: var(--saw-tint);
+}
+
+.saw-cat-card__viewall {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding-top: 8px;
+	border-top: 1px solid var(--saw-line);
+	width: 100%;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--saw-red);
+	text-decoration: none;
+}
+
+/* Reveal only where a real pointer exists, so touch devices never get a stuck
+   panel — tapping the card simply opens the category landing page. */
+@media (hover: hover) and (pointer: fine) {
+	.saw-cat-card:hover .saw-cat-card__flyout,
+	.saw-cat-card:focus-within .saw-cat-card__flyout {
+		display: block;
+		animation: saw-flyout-in 0.18s ease both;
+	}
+
+	/* Merge the card and flyout into one shape: square the bottom corners so the
+	   card outline flows straight into the flyout (no overlapping/notched border). */
+	.saw-cat-card:hover,
+	.saw-cat-card:focus-within {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.saw-cat-card:hover .saw-cat-card__main,
+	.saw-cat-card:focus-within .saw-cat-card__main {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+@keyframes saw-flyout-in {
+	from { opacity: 0; transform: translateY(-6px) scaleY(0.98); }
+	to { opacity: 1; transform: translateY(0) scaleY(1); }
+}
+
+/* Respect reduced-motion — reveal without the slide/scale. */
+@media (prefers-reduced-motion: reduce) {
+	.saw-cat-card:hover .saw-cat-card__flyout,
+	.saw-cat-card:focus-within .saw-cat-card__flyout { animation: none; }
+}
+
 @media (min-width: 768px) { .saw-cat-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; } }
 @media (min-width: 1100px) { .saw-cat-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1500px) { .saw-cat-grid { grid-template-columns: repeat(6, 1fr); } }
 
 /* ── Product grid & cards ── */
 .saw-product-grid {
@@ -570,6 +752,7 @@ h1, h2, h3, .saw-logo__text strong {
 
 @media (min-width: 768px) { .saw-product-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; } }
 @media (min-width: 1100px) { .saw-product-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1500px) { .saw-product-grid { grid-template-columns: repeat(5, 1fr); } }
 
 .saw-product-card {
 	display: flex;
@@ -790,6 +973,7 @@ h1, h2, h3, .saw-logo__text strong {
 
 @media (min-width: 768px) { .saw-spares-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
 @media (min-width: 1100px) { .saw-spares-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1500px) { .saw-spares-grid { grid-template-columns: repeat(5, 1fr); } }
 
 /* ── Bulk band ── */
 .saw-bulk {
@@ -968,7 +1152,12 @@ h1, h2, h3, .saw-logo__text strong {
 	gap: 26px;
 }
 
-@media (min-width: 960px) { .saw-contact-grid { grid-template-columns: 1fr 1.1fr; gap: 40px; } }
+@media (min-width: 960px) { .saw-contact-grid { grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: start; } }
+
+/* Keep the enquiry form in view while the contact column scrolls */
+@media (min-width: 960px) {
+	.saw-contact-form-panel { position: sticky; top: 96px; }
+}
 
 .saw-contact-cards { display: flex; flex-direction: column; gap: 12px; }
 
@@ -1034,8 +1223,11 @@ h1, h2, h3, .saw-logo__text strong {
 .saw-locations-list__grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 10px;
+	gap: 12px;
 }
+
+@media (min-width: 640px) { .saw-locations-list__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .saw-locations-list__grid { grid-template-columns: repeat(3, 1fr); } }
 
 .saw-location-card {
 	border: 1px solid var(--saw-line);
