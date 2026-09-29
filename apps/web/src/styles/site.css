@@ -449,11 +449,12 @@ h1, h2, h3, .saw-logo__text strong {
 }
 
 /* Mobile/tablet header: drop the redundant WhatsApp icon (floating bubble covers
-   it) so the action cluster stays clean and the menu button reads clearly on the
-   right edge. */
+   it) and space the search / cart / menu icons evenly at the right corner, like
+   IKEA's mobile header. */
 @media (max-width: 1023px) {
 	.saw-header__actions .saw-icon-btn--whatsapp { display: none; }
-	.saw-burger { margin-left: 6px; }
+	.saw-header__actions { gap: 10px; }
+	.saw-burger { margin-left: 0; }
 }
 
 /* ── Hero ── */
