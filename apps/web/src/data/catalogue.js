@@ -25,6 +25,15 @@ export const CATEGORIES = [
 		keywords: ['refrigerant', 'r32', 'r410a', 'r134a', 'gas', 'floron', 'stallion', 'cylinder', 'freon'],
 		specFields: ['Gas type', 'Brand', 'Cylinder size', 'Net weight', 'Gross weight', 'Packaging', 'SKU', 'Availability'],
 		popular: ['R32 gas', 'R410A gas', 'R134a gas', 'Floron', 'Stallion'],
+		subcategories: [
+			{ slug: 'r32', name: 'R32', keywords: ['r32', 'r-32'] },
+			{ slug: 'r410a', name: 'R410A', keywords: ['r410', 'r-410'] },
+			{ slug: 'r134a', name: 'R134A', keywords: ['r134', 'r-134'] },
+			{ slug: 'r22', name: 'R22', keywords: ['r22', 'r-22'] },
+			{ slug: 'r290', name: 'R290', keywords: ['r290', 'r-290'] },
+			{ slug: 'other-refrigerants', name: 'Other Refrigerants', keywords: ['refrigerant', 'freon', 'gas'] },
+			{ slug: 'gas-cylinders', name: 'Gas Cylinders', keywords: ['cylinder'] },
+		],
 	},
 	{
 		slug: 'copper-pipes-coils',
@@ -35,6 +44,12 @@ export const CATEGORIES = [
 		keywords: ['copper', 'pipe', 'coil', 'pancake', 'tube'],
 		specFields: ['Size', 'Thickness', 'Length', 'Coil / straight', 'Brand', 'Price per meter', 'Price per coil', 'SKU'],
 		popular: ['1/4" copper pipe', '3/8" copper pipe', '5/8" copper pipe', '1 1/8" copper pipe'],
+		subcategories: [
+			{ slug: 'copper-pipes', name: 'Copper Pipes', keywords: ['pipe', 'tube', 'straight'] },
+			{ slug: 'copper-coils', name: 'Copper Coils', keywords: ['coil', 'pancake'] },
+			{ slug: 'copper-fittings', name: 'Copper Fittings', keywords: ['fitting', 'elbow', 'coupling', 'reducer', 'flare nut'] },
+			{ slug: 'copper-pipe-kits', name: 'Copper Pipe Kits', keywords: ['kit', 'insulated pipe'] },
+		],
 	},
 	{
 		slug: 'ac-compressors',
@@ -44,6 +59,12 @@ export const CATEGORIES = [
 		keywords: ['compressor', 'rotary', 'scroll'],
 		specFields: ['Brand', 'Model', 'Capacity', 'Refrigerant', 'Type', 'Application', 'Voltage', 'Phase', 'SKU'],
 		popular: ['1 ton compressor', '1.5 ton compressor', '2 ton compressor', 'rotary compressor'],
+		subcategories: [
+			{ slug: 'rotary-compressors', name: 'Rotary Compressors', keywords: ['rotary'] },
+			{ slug: 'scroll-compressors', name: 'Scroll Compressors', keywords: ['scroll'] },
+			{ slug: 'reciprocating-compressors', name: 'Reciprocating Compressors', keywords: ['reciprocating', 'recip'] },
+			{ slug: 'inverter-compressors', name: 'Inverter Compressors', keywords: ['inverter'] },
+		],
 	},
 	{
 		slug: 'ac-motors',
@@ -71,6 +92,11 @@ export const CATEGORIES = [
 		keywords: ['insulation', 'foam', 'nitrile'],
 		specFields: ['Pipe size', 'Thickness', 'Length', 'Brand', 'Sold by', 'SKU', 'Availability'],
 		popular: ['9 mm insulation', '13 mm insulation', 'insulation tube'],
+		subcategories: [
+			{ slug: 'insulation-tubes', name: 'Insulation Tubes', keywords: ['tube', 'nitrile'] },
+			{ slug: 'insulation-rolls', name: 'Insulation Rolls', keywords: ['roll', 'sheet'] },
+			{ slug: 'insulation-tape', name: 'Insulation Tape', keywords: ['tape'] },
+		],
 	},
 	{
 		slug: 'electrical-materials',
@@ -81,6 +107,13 @@ export const CATEGORIES = [
 		keywords: ['wire', 'capacitor', 'contactor', 'relay', 'terminal', 'electrical', 'cable', '4 core', '4-core'],
 		specFields: ['Type', 'Size / rating', 'Voltage', 'Brand', 'SKU', 'Availability'],
 		popular: ['4 core flexible wire', 'AC capacitor', 'contactor', 'AC wire'],
+		subcategories: [
+			{ slug: 'wires-cables', name: 'Wires & Cables', keywords: ['wire', 'cable', '4 core', '4-core'] },
+			{ slug: 'capacitors', name: 'Capacitors', keywords: ['capacitor', 'mfd'] },
+			{ slug: 'contactors', name: 'Contactors', keywords: ['contactor'] },
+			{ slug: 'relays', name: 'Relays', keywords: ['relay', 'olp'] },
+			{ slug: 'terminals', name: 'Terminals', keywords: ['terminal', 'connector', 'lug'] },
+		],
 	},
 	{
 		slug: 'ac-stands',
@@ -91,6 +124,11 @@ export const CATEGORIES = [
 		keywords: ['stand', 'bracket', 'mount'],
 		specFields: ['Size', 'Material', 'Load capacity', 'Finish', 'SKU', 'Availability'],
 		popular: ['outdoor AC stand', 'heavy duty stand', 'wall mount bracket'],
+		subcategories: [
+			{ slug: 'outdoor-stands', name: 'Outdoor Stands', keywords: ['outdoor', 'floor stand'] },
+			{ slug: 'wall-brackets', name: 'Wall Brackets', keywords: ['wall', 'bracket', 'mount'] },
+			{ slug: 'heavy-duty-stands', name: 'Heavy Duty Stands', keywords: ['heavy duty', 'heavy-duty'] },
+		],
 	},
 	{
 		slug: 'pcb-electronics',
@@ -100,6 +138,12 @@ export const CATEGORIES = [
 		keywords: ['pcb', 'board', 'sensor', 'receiver', 'display', 'remote', 'control'],
 		specFields: ['Model number', 'Compatible brand', 'Type', 'SKU', 'Availability'],
 		popular: ['AC PCB', 'control board', 'AC sensor', 'display board'],
+		subcategories: [
+			{ slug: 'pcbs', name: 'PCBs', keywords: ['pcb', 'board', 'control board'] },
+			{ slug: 'sensors', name: 'Sensors', keywords: ['sensor', 'thermistor'] },
+			{ slug: 'display-boards', name: 'Display Boards', keywords: ['display', 'receiver'] },
+			{ slug: 'remotes', name: 'Remotes', keywords: ['remote'] },
+		],
 	},
 	{
 		slug: 'installation-material',
@@ -109,6 +153,12 @@ export const CATEGORIES = [
 		keywords: ['installation', 'drain', 'tape', 'fastener', 'kit', 'consumable', 'pvc'],
 		specFields: ['Item', 'Size', 'Quantity', 'Brand', 'SKU', 'Availability'],
 		popular: ['drain pipe', 'installation kit', 'vinyl tape', 'fasteners'],
+		subcategories: [
+			{ slug: 'drain-pipes', name: 'Drain Pipes', keywords: ['drain', 'pvc'] },
+			{ slug: 'tapes', name: 'Tapes', keywords: ['tape', 'vinyl'] },
+			{ slug: 'fasteners', name: 'Screws & Fasteners', keywords: ['fastener', 'screw', 'clamp', 'anchor'] },
+			{ slug: 'installation-kits', name: 'Installation Kits', keywords: ['kit', 'consumable'] },
+		],
 	},
 	{
 		slug: 'tools-accessories',
@@ -118,6 +168,14 @@ export const CATEGORIES = [
 		keywords: ['tool', 'gauge', 'manifold', 'vacuum', 'pump', 'flaring', 'cutter', 'hose', 'leak', 'charging'],
 		specFields: ['Type', 'Model', 'Brand', 'SKU', 'Availability'],
 		popular: ['manifold gauge', 'vacuum pump', 'flaring tool', 'tube cutter', 'charging hose'],
+		subcategories: [
+			{ slug: 'manifold-gauges', name: 'Manifold Gauges', keywords: ['manifold', 'gauge'] },
+			{ slug: 'vacuum-pumps', name: 'Vacuum Pumps', keywords: ['vacuum', 'pump'] },
+			{ slug: 'flaring-tools', name: 'Flaring & Swaging Tools', keywords: ['flaring', 'swaging', 'flare'] },
+			{ slug: 'tube-cutters', name: 'Tube Cutters', keywords: ['cutter'] },
+			{ slug: 'charging-hoses', name: 'Charging Hoses', keywords: ['hose', 'charging'] },
+			{ slug: 'leak-detectors', name: 'Leak Detectors', keywords: ['leak', 'detector'] },
+		],
 	},
 ];
 
