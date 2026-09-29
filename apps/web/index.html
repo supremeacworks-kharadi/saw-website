@@ -122,7 +122,7 @@
 		<div id="root"></div>
 		<div id="saw-splash" role="status" aria-label="Loading Supreme AC Works">
 			<div class="saw-splash__ring">
-				<img class="saw-splash__logo" src="/branding/logo-icon.png" alt="" width="56" height="56" />
+				<img class="saw-splash__logo" src="/branding/favicon-96.png" alt="" width="56" height="56" />
 			</div>
 		</div>
 		<script>
@@ -152,6 +152,9 @@
 						splash.parentNode && splash.parentNode.removeChild(splash);
 					}, 450);
 				}
+
+				// Let the React app dismiss the splash the instant it paints.
+				window.__sawDismissSplash = dismiss;
 
 				// Whichever comes first: app/window ready, or a hard 900ms cap.
 				if (document.readyState === 'complete') {
