@@ -453,6 +453,11 @@ h1, h2, h3, .saw-logo__text strong {
    IKEA's mobile header. */
 @media (max-width: 1023px) {
 	.saw-header__actions .saw-icon-btn--whatsapp { display: none; }
+	/* The nav is display:none on mobile but still in the DOM, so its adjacent
+	   `margin-left: 0` reset would otherwise leave the icons mid-row. Force the
+	   action group back to the extreme right edge. */
+	.saw-nav + .saw-header__actions,
+	.saw-header__actions { margin-left: auto; }
 	.saw-header__actions { gap: 10px; }
 	.saw-burger { margin-left: 0; }
 }
